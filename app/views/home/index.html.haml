@@ -1,0 +1,119 @@
+.row.header
+  %nav.navbar.navbar-fixed-top
+    .navbar-inner
+      .container
+        %a.btn.btn-navbar.m-btn.blue{data: {toggle: "collapse", target: ".nav-collapse"}}
+          %span.icon-bar
+          %span.icon-bar
+          %span.icon-bar
+
+        %h1.brand
+          = link_to "Five Tool Development", home_path
+
+        .nav-collapse
+          %ul.nav.pull-right
+            %li= link_to "Home", "#home", class: "anchorLink"
+            %li= link_to "About", "#about", class: "anchorLink"
+            %li= link_to "Portfolio", "#portfolio", class: "anchorLink"
+            %li= link_to "Contact", "#contact", class: "anchorLink"
+
+
+.full.callout
+  .container
+    .row
+      .span12.companycallout
+        %h1 Five Tool Dev
+
+#about.row-fluid.section
+  .container
+    .explain
+      %h2 about
+      %p.intro Five Tool Development helps small companies do big things.
+
+    .row-fluid
+      .span6
+        %h3 Development
+        %p We with Ruby on Rails, PostgreSQL, and Heroku. Whether your project is building something new from scratch or a rehabilitating an existing application to give it new life, Five Tool can bring your idea to successful execution.
+
+      .span6
+        %h3 Consulting
+        %p You have a dream, but you aren't how to make it happen. Five Tool Development can help you find the best resources for your budget. When your launch takes off, you'll already have a plan to keep up with growth.
+
+#portfolio.row.section
+  .container
+    %h2 portfolio
+    %p.intro Who we work with
+    %nav.primary.m-btn-group.toggle-buttons.clearfix
+      %ul
+        %li= link_to "All", '#', class: 'm-btn selected', data: {filter: ".entry"}
+        %li= link_to "Development", "#", class: 'm-btn', data: {filter: ".development"}
+        %li= link_to "Consulting", "#", class: 'm-btn', data: {filter: ".consulting"}
+
+
+    %section.main.clearfix
+      .portfolio
+        %figure.entry.development.consulting
+          Velocity Strategies
+
+        %figure.entry.development
+          District Karaoke
+
+        %figure.entry.consulting
+          Rising Tide Interactive
+
+        %figure.entry.consulting
+          SimpleBallot
+
+#contact.row.section
+  %div
+    .container
+      %h2 Contact
+      %p.intro Five Tool Development is located in Adams Morgan in Washington, DC.</p>
+
+    #map.container.hidden-phone
+
+    = form_for ContactMessage.new do |f|
+      .container
+        .row
+          .span8
+            %h3 Get in touch with us.
+            %p Fill out the form below and we will get back to you soon.
+
+            %form#contact-form
+
+              %fieldset
+                .row
+                  .holder.span8
+                    .message
+                      .top
+                      .contents
+                        #alert
+                      .bottom
+                  .field.span8
+                    = f.text_field :name, class: "input-text m-wrap m-ctrl-large", placeholder: "Your Name"
+                  .field.span8
+                    = f.text_field :name, class: "input-text m-wrap m-ctrl-large", placeholder: "Your Email Address"
+                  .field.span8
+                    = f.text_area :message, placeholder: "Your Message", class: "input-textarea m-wrap m-ctrl-large"
+                  .field.span8
+                    = f.submit "Send Message", class: "m-btn green"
+
+          .span3.offset1
+            %h3 Contact info
+            %p
+              1760 Euclid Street NW
+              %br
+              Suite #502
+              %br
+              Washington, DC 20009
+              %br
+              Phone: 202.507.9041
+              %br
+              Email:
+              = mail_to "info@fivetool.io"
+              %br
+              Web:
+              = link_to "www.fivetool.io"
+              %br
+              Twitter:
+              = link_to "@fivetooldev", "http://www.twitter.com/fivetooldev"
