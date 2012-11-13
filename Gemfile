@@ -49,7 +49,10 @@ group :development, :test do
 end
 
 group :test do
+  gem 'action_mailer_cache_delivery'
+  gem 'capybara-webkit'
   gem 'cucumber-rails'
   gem 'database_cleaner'
+  gem 'email_spec'
   gem 'rspec-rails'
 end
