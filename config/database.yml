@@ -11,10 +11,13 @@ development:
   pool: 5
   timeout: 5000
 
-test:
+test: &test
   adapter: postgresql
   database: fivetooldev-test
   host: localhost
   user: geoff
   pool: 5
   timeout: 5000
+
+cucumber:
+  <<: *test
