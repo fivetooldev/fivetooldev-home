@@ -3,7 +3,8 @@
 #
 #   Ensure the SQLite 3 gem is defined in your Gemfile
 #   gem 'sqlite3'
-development:
+
+development: &default
   adapter: postgresql
   database: fivetooldev-development
   host: localhost
@@ -21,3 +22,7 @@ test: &test
 
 cucumber:
   <<: *test
+
+
+production:
+  <<: *default
