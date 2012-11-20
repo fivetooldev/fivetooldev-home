@@ -17,7 +17,6 @@
 #= require iso-custom
 #= require jquery.isotope.min
 #= require anchor
-#= require twitter/bootstrap
 #= require_tree .
 
 jQuery(document).ready ->

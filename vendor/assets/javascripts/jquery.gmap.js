@@ -18,22 +18,22 @@
 		case 'centerAt':
 			return $(this).trigger('gMap.centerAt', [methods_options.latitude, methods_options.longitude, methods_options.zoom]);
 		}
-
+		
 		// Build main options before element iteration
 		var opts = $.extend({}, $.fn.gMap.defaults, options);
-
+    	
 		// Iterate through each element
 		return this.each(function()
 		{
 			// Create map and set initial options
 			var $gmap = new google.maps.Map(this);
-
+			
 			// Create new object to geocode addresses
 			var $geocoder = new google.maps.Geocoder();
-
+			
 			// Check for address to center on
 			if (opts.address)
-			{
+			{ 
 				// Get coordinates for given address and center the map
 				$geocoder.geocode(
 					{
@@ -78,12 +78,12 @@
 						$gmap.setCenter(new google.maps.LatLng(34.885931, 9.84375));
 					}
 				}
-			}
+			}	
 			$gmap.setZoom(opts.zoom);
-
+			
 			// Set the preferred map type
 			$gmap.setMapTypeId(google.maps.MapTypeId[opts.maptype]);
-
+			
 			// Set scrollwheel option
 			var map_options = { scrollwheel: opts.scrollwheel, disableDoubleClickZoom: !opts.doubleclickzoom };
 			// Check for map controls
@@ -92,18 +92,18 @@
 			}else if (opts.controls.length != 0){
 				$.extend(map_options, opts.controls, { disableDefaultUI: true });
 			}
-
+			
 			$gmap.setOptions(map_options);
-
+									
 			// Create new icon
 			var gicon = new google.maps.Marker();
-
+			
 			// Set icon properties from global options
 			marker_icon = new google.maps.MarkerImage(opts.icon.image);
 			marker_icon.size = new google.maps.Size(opts.icon.iconsize[0], opts.icon.iconsize[1]);
 			marker_icon.anchor = new google.maps.Point(opts.icon.iconanchor[0], opts.icon.iconanchor[1]);
 			gicon.setIcon(marker_icon);
-
+			
 			if(opts.icon.shadow)
 			{
 				marker_shadow = new google.maps.MarkerImage(opts.icon.shadow);
@@ -111,7 +111,7 @@
 				marker_shadow.anchor = new google.maps.Point(opts.icon.shadowanchor[0], opts.icon.shadowanchor[1]);
 				gicon.setShadow(marker_shadow);
 			}
-
+			
 			// Bind actions
 			$(this).bind('gMap.centerAt', function(e, latitude, longitude, zoom)
 			{
@@ -120,7 +120,7 @@
 
 				$gmap.panTo(new google.maps.LatLng(parseFloat(latitude), parseFloat(longitude)));
 			});
-
+			
 			var last_infowindow;
 			$(this).bind('gMap.addMarker', function(e, latitude, longitude, content, icon, popup)
 			{
@@ -136,7 +136,7 @@
 					marker_icon.size = new google.maps.Size(icon.iconsize[0], icon.iconsize[1]);
 					marker_icon.anchor = new google.maps.Point(icon.iconanchor[0], icon.iconanchor[1]);
 					gmarker.setIcon(marker_icon);
-
+					
 					if(icon.shadow)
 					{
 						marker_shadow = new google.maps.MarkerImage(icon.shadow);
@@ -148,16 +148,16 @@
 					gmarker.setIcon(gicon.getIcon());
 					gmarker.setShadow(gicon.getShadow());
 				}
-
+				
 				if(content)
 				{
 					if(content == '_latlng')
 						content = latitude + ', ' + longitude;
-
+					
 					var infowindow = new google.maps.InfoWindow({
 						content: opts.html_prepend + content + opts.html_append
 					});
-
+					
 					google.maps.event.addListener(gmarker, 'click', function()
 					{
 						last_infowindow && last_infowindow.close();
@@ -175,20 +175,20 @@
 				}
 				gmarker.setMap($gmap);
 			});
-
+			
 			// Loop through marker array
 			for (var j = 0; j < opts.markers.length; j++)
 			{
 				// Get the options from current marker
 				marker = opts.markers[j];
-
+				
 				// Check if address is available
 				if (marker.address)
 				{
 					// Check for reference to the marker's address
 					if (marker.html == '_address')
 						marker.html = marker.address;
-
+					
 					// Get the point for given address
 					var $this = this;
 					$geocoder.geocode({
@@ -209,12 +209,12 @@
 				}
 			}
 		});
-
+		
 	}
-
+		
 	// Default settings
 	$.fn.gMap.defaults = {
-		address: 'Adams Morgan, Washington, DC',
+		address: '',
 		latitude: 0,
 		longitude: 0,
 		zoom: 1,
@@ -234,5 +234,5 @@
 			shadowanchor: [6, 34],
 		}
 	}
-
+	
 })(jQuery);
