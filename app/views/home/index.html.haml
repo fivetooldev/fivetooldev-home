@@ -53,53 +53,6 @@
         %p
           You have a dream, but you aren't sure how to make it happen. Five Tool Development can provide the services and advice of a chief technology officer (CTO) at a fraction of the cost of hiring a permanent, full-time team member. We can answer questions about design, architecture, hosting, and hiring. We'll help you find the best resources for your budget. When your launch takes off, you'll already have a plan in place to keep up with growth.
 
-#portfolio.row.section
-  .container
-    %h2 portfolio
-    %p.intro Some of our recent work
-    %nav.primary.m-btn-group.toggle-buttons.clearfix
-      %ul
-        %li= link_to "All", '#', class: 'm-btn selected', data: {filter: ".entry"}
-        %li= link_to "Development", "#", class: 'm-btn', data: {filter: ".development"}
-        %li= link_to "Consulting", "#", class: 'm-btn', data: {filter: ".consulting"}
-
-
-    %section.main.clearfix
-      .portfolio
-
-
-        %figure.entry.development
-          .jumbotron
-            %h4 District Karaoke
-            = image_tag "district_karaoke.png", size: '200x200'
-          %p
-            = raw("When #{raw(link_to "District Karaoke", "http://www.districtkaraoke.com")}, the nation's second competitive karaoke league, needed to grow their mobile voting software to accomodate their rapid growth, Five Tool Development helped to rebuild their Ruby on Rails application to support more features, a greater number of users, and to support a wider variety of mobile devices.")
-
-            %br
-            %br
-
-            =raw("Check out District Karaoke in the #{link_to "Washington Post", "http://www.washingtonpost.com/local/karaoke-scene-at-dc-bars-gets-competitive/2012/07/30/gJQAtZGGLX_story.html"}.")
-
-        %figure.entry.development.consulting
-          .jumbotron
-            %h4 Velocity Strategies
-            = image_tag "velocity_strategies.png", size: '200x200'
-          %p= raw("#{link_to "Velocity Strategies", "http://www.velocitystrategies.com"} partners with Five Tool Development to build organizing tools for unions, including the American Federation of Teachers' iOS application and a private content management system optimized for mobile users.")
-
-
-        %figure.entry.consulting.development
-          .jumbotron
-            %h4 SimpleBallot
-            = image_tag "simpleballot.png", size: '200x200'
-          %p= raw("Five Tool Development built #{link_to "SimpleBallot", "http://www.simpleballot.com"}'s survey platform, which debuted at a DC Office of Planning and American Institute of Architect's Citizen Planner Forum this summer. The application collects data from attendees and presents summary results live, allowing meeting organizers and attendees to get quick feedback during large group discussions.")
-
-        %figure.entry.consulting
-          .jumbotron
-            %h4 Rising Tide Interactive
-            = image_tag "rising_tide_interactive.png", size: '200x200'
-          %p
-            = raw("Five Tool Development worked with #{link_to "Rising Tide Interactive", "http://www.risingtideinteractive.com"}, a leading online strategy consultancy, to build a customized reporting tool for their clients' online advertising data. Rising Tide's clients and staff are now able to review and slice advertising data through their private web application, giving clients new insight into the success of their online spending. Five Tool Development provided project management and review services as well as management of outside vendors involved in the project.")
-
 #contact.row.section
   %div
     .container
