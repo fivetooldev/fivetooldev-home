@@ -42,7 +42,7 @@ gem 'therubyracer'
 gem 'less-rails'
 #gem 'twitter-bootstrap-rails'
 
-gem 'activeadmin'
+#gem 'activeadmin'
 
 group :development, :test do
   gem 'factory_girl_rails'
