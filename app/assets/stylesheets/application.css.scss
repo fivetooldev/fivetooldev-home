@@ -8,4 +8,12 @@
  * You're free to add application-wide styles to this file and they'll appear at the top of the
  * compiled file, but it's generally better to create a new file per style scope.
  *
+ *= require bootstrap
+ *= require bootstrap-responsive
+ *= require m-styles.min
+ *= require m-forms.min
+ *= require m-buttons
+ *= require custom
  */
+
+ @import "http://fonts.googleapis.com/css?family=Open+Sans:400,300"

@@ -17,6 +17,13 @@
 #= require iso-custom
 #= require jquery.isotope.min
 #= require anchor
+#= require jquery.mousewheel-3.0.4.pack
+#= require jquery.gmap
+#= require iso-custom
+#= require jquery.isotope.min
+#= require bootstrap-scrollspy
+#= require anchor
+#= require bootstrap
 #= require_tree .
 
 jQuery(document).ready ->
@@ -36,3 +43,16 @@ jQuery(document).ready ->
     latitude: 38.9205787,
     longitude: -77.0419928,
     zoom: 14
+
+_gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-34039031-1']);
+_gaq.push(['_setDomainName', 'fivetool.io']);
+_gaq.push(['_trackPageview']);
+
+->
+  ga = document.createElement('script')
+  ga.type = 'text/javascript'
+  ga.async = true
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js'
+  s = document.getElementsByTagName('script')[0]
+  s.parentNode.insertBefore(ga, s)
