@@ -2,4 +2,6 @@
 require File.expand_path('../application', __FILE__)
 
 # Initialize the rails application
-Fivetool::Application.initialize!
+ActiveSupport::Deprecation.silence do
+  Fivetool::Application.initialize!
+end
