@@ -17,8 +17,13 @@ end
 gem 'jquery-rails'
 gem 'haml-rails'
 
+gem 'clearance'
+
 group :development, :test do
+  gem 'factory_girl_rails'
   gem 'quiet_assets'
+  gem 'rspec-rails'
+  gem 'shoulda-matchers'
 end
 
 group :test do
@@ -27,5 +32,4 @@ group :test do
   gem 'cucumber-rails'
   gem 'database_cleaner'
   gem 'email_spec'
-  gem 'rspec-rails'
 end
