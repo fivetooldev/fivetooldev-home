@@ -6,6 +6,12 @@ module ControllerMacros
 
   module ClassMethods
 
+    def it_should_respond_with_application_layout_html_and_success
+      it { should render_with_layout(:application) }
+      it { should respond_with_content_type(:html) }
+      it { should respond_with(:success) }
+    end
+
     def it_should_require_login_for_access(verbs = {})
       if verbs.empty?
         verbs = {
