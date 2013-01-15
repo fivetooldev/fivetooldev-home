@@ -17,6 +17,10 @@ end
 gem 'jquery-rails'
 gem 'haml-rails'
 
+group :development, :test do
+  gem 'quiet_assets'
+end
+
 group :test do
   gem 'action_mailer_cache_delivery'
   gem 'capybara-webkit'
