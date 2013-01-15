@@ -8,3 +8,4 @@ development: &default
 test:
   <<: *default
   database: fivetooldev-test
+  min_messages: error
