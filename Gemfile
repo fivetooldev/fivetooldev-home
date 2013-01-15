@@ -17,14 +17,6 @@ end
 gem 'jquery-rails'
 gem 'haml-rails'
 
-
-gem 'therubyracer'
-gem 'less-rails'
-
-group :development, :test do
-  gem 'factory_girl_rails'
-end
-
 group :test do
   gem 'action_mailer_cache_delivery'
   gem 'capybara-webkit'
