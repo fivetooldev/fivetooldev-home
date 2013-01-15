@@ -1,8 +1,8 @@
 Given /^a filled out contact us form on the home page$/ do
   visit '/'
-  fill_in "contact_message_name", with: "Susan Keppelman"
-  fill_in "contact_message_email_address", with: "susan@fivetool.io"
-  fill_in "contact_message_message", with: "Five Tool Development is the firm for me."
+  fill_in "new_contact_message_name", with: "Susan Keppelman"
+  fill_in "new_contact_message_email_address", with: "susan@fivetool.io"
+  fill_in "new_contact_message_message", with: "Five Tool Development is the firm for me."
 end
 
 When /^I click "(.*?)"$/ do |element|
