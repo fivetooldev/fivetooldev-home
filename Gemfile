@@ -32,4 +32,6 @@ group :test do
   gem 'cucumber-rails'
   gem 'database_cleaner'
   gem 'email_spec'
+  gem 'bourne'
+  gem 'timecop'
 end
