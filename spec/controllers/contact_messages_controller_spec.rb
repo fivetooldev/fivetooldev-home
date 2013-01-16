@@ -1,0 +1,60 @@
+require 'spec_helper'
+
+describe ContactMessagesController, :blog_entry, :controller do
+
+  def attributes
+    {'this' => 'that'}
+  end
+
+  describe "routing", :routing do
+    it { should_not route(:get, '/contact_messages').to(action: :index) }
+    it { should_not route(:get, '/contact_messages/1')
+      .to(action: :show, id: 1) }
+    it { should_not route(:get, '/contact_messages/1/edit')
+      .to(action: :edit, id: 1) }
+    it { should_not route(:get, '/contact_messages/new')
+      .to(action: :new) }
+    it { should route(:post, '/contact_messages').to(action: :create) }
+    it { should_not route(:put, '/contact_messages/1')
+      .to(action: :update, id: 1) }
+    it { should_not route(:delete, '/contact_messages/1')
+      .to(action: :destroy, id: 1) }
+  end
+
+  before(:each) do
+    controller.stubs(deliver_notification_email: true)
+  end
+
+  describe "POST create" do
+    describe "with valid params" do
+      before { post :create, contact_message: attributes_for(:contact_message) }
+
+      it { should assign_to(:contact_message).with_kind_of(ContactMessage) }
+      it { should redirect_to(root_path) }
+      it { should respond_with(:redirect) }
+      it { should set_the_flash[:notice]
+        .to('Thanks for contacting us. We will be in touch shortly.')
+      }
+
+      it "sends an email" do
+        controller.should have_received(:deliver_notification_email)
+      end
+    end
+  
+    describe "with invalid params" do
+      before { post :create, contact_message: {} }
+
+      it { should assign_to(:contact_message).with_kind_of(ContactMessage) }
+      it { should redirect_to(root_path) }
+      it { should respond_with(:redirect) }
+      it { should set_the_flash[:notice]
+        .to('There was a problem with your submission. Please try again or email us at info@fivetool.io')
+      }
+    end
+
+    it "does not send an email" do
+      controller.should have_received(:deliver_notification_email).never
+    end
+  end
+  
+end
