@@ -34,4 +34,5 @@ group :test do
   gem 'email_spec'
   gem 'bourne'
   gem 'timecop'
+  gem 'simplecov', require: false
 end
