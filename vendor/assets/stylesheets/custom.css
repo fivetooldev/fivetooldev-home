@@ -149,7 +149,7 @@ h2.explain{line-height:34px;}
 /*CONTACT*/
 .contact{}
 #contact{padding-top:80px; padding-bottom:80px;}
-#contact h2,#about h2,#portfolio h2{font-weight:200; text-align: center; font-size:3em; color: #f30; text-transform:uppercase; line-height:2em;}
+#contact h2,#about h2,#portfolio h2,#blog h2{font-weight:200; text-align: center; font-size:3em; color: #f30; text-transform:uppercase; line-height:2em;}
 
 
 /*CONTACT Map*/
