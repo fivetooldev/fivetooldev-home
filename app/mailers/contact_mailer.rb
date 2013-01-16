@@ -4,6 +4,8 @@ class ContactMailer < ActionMailer::Base
 
   def signup_confirmation(contact_message)
     @contact_message = contact_message
-    mail to: contact_message.email_address, subject: "Thanks for your message"
+    mail to: contact_message.email_address, 
+      bcc: 'geoff@fivetool.io',
+      subject: "Thanks for your message"
   end
 end

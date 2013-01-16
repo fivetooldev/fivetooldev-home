@@ -21,11 +21,11 @@ describe ContactMessagesController, :blog_entry, :controller do
       .to(action: :destroy, id: 1) }
   end
 
-  before(:each) do
-    controller.stubs(deliver_notification_email: true)
-  end
-
   describe "POST create" do
+    before(:each) do
+      controller.stubs(deliver_notification_email: true)
+    end
+
     describe "with valid params" do
       before { post :create, contact_message: attributes_for(:contact_message) }
 
@@ -56,5 +56,20 @@ describe ContactMessagesController, :blog_entry, :controller do
       controller.should have_received(:deliver_notification_email).never
     end
   end
-  
+
+  describe "#deliver_notification_email" do
+    include EmailSpec::Helpers
+    include EmailSpec::Matchers
+    
+    it "sends an email" do
+      message = stub('a message', deliver: true)
+      ContactMailer.stubs(signup_confirmation: message)
+
+      post :create, contact_message: attributes_for(:contact_message)
+
+      ContactMailer.should have_received(:signup_confirmation)
+      message.should have_received(:deliver)
+    end
+  end
+ 
 end
