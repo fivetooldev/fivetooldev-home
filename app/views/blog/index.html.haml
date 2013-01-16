@@ -1,0 +1,10 @@
+- @blog_entries.each do |post|
+  = content_tag_for(:article, post) do
+    %h2= link_to(post, published_blog_entry_path(post.to_param))
+    %small= published_date_helper(post)
+    %p= raw post.content
+
+    %p
+      %i
+        = '-'
+        = mail_to('geoff@fivetool.io', 'Geoff Harcourt')

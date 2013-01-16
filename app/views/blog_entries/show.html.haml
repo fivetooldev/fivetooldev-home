@@ -11,7 +11,7 @@
   = @blog_entry.title
 %p
   %b Content:
-  = @blog_entry.content
+  = raw @blog_entry.content
 
 = link_to 'Edit', edit_blog_entry_path(@blog_entry)
 \|
