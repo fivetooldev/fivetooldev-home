@@ -1,6 +1,11 @@
 Fivetool::Application.routes.draw do
-  resources :contact_messages, only: [:create]
+  match '/blog', to: 'blog#index', as: 'blog'
+  match '/blog/:id', to: 'blog#show', as: 'published_blog_entry'
+  
   resources :blog_entries
+
+  resources :contact_messages, only: [:create]
+  
 
   get '/home', to: 'home#index', as: 'home'
 

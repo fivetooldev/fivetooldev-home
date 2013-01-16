@@ -25,13 +25,14 @@ describe BlogEntriesController, :blog_entry, :controller do
     end
 
     before(:each) do
-      @new_blog_entry = build_stubbed(:blog_entry)
       @blog_entry = build_stubbed(:blog_entry)
       @blog_entry.stubs(destroy: true)
+      @new_blog_entry = build_stubbed(:blog_entry)
+
 
       BlogEntry.stubs(
         all: [@blog_entry],
-        new: @new_blog_entry
+        new: @new_blog_entry,
       )
 
       BlogEntry.stubs(:find).with('123').returns(@blog_entry)
