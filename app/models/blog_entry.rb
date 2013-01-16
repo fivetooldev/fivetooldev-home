@@ -4,4 +4,6 @@ class BlogEntry < ActiveRecord::Base
 
   validates_presence_of :author, :content, :title
 
+  scope :published, -> { where('published_at IS NOT NULL') }
+
 end
