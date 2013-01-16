@@ -20,6 +20,7 @@ gem 'haml-rails'
 gem 'clearance'
 
 group :development, :test do
+  gem 'letter_opener'
   gem 'factory_girl_rails'
   gem 'quiet_assets'
   gem 'rspec-rails'

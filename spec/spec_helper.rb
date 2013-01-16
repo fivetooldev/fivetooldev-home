@@ -15,8 +15,10 @@ Dir[Rails.root.join("spec/support/**/*.rb")].each {|f| require f}
 Capybara.javascript_driver = :webkit
 
 RSpec.configure do |config|
-  config.include FactoryGirl::Syntax::Methods
-  config.include ControllerMacros, type: :controller
+  config.include(FactoryGirl::Syntax::Methods)
+  config.include(ControllerMacros, type: :controller)
+  config.include(EmailSpec::Helpers)
+  config.include(EmailSpec::Matchers)
 
   # ## Mock Framework
   config.mock_with :mocha
