@@ -6,4 +6,8 @@ class BlogEntry < ActiveRecord::Base
 
   scope :published, -> { where('published_at IS NOT NULL') }
 
+  def to_s
+    title
+  end
+
 end
