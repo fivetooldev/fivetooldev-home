@@ -33,7 +33,7 @@ describe BlogEntriesController, :blog_entry, :controller do
         all: [@blog_entry],
         new: @new_blog_entry
       )
-      
+
       BlogEntry.stubs(:find).with('123').returns(@blog_entry)
     end
 
@@ -159,7 +159,7 @@ describe BlogEntriesController, :blog_entry, :controller do
       it { should respond_with_content_type(:html) }
       it { should respond_with(:redirect) }
 
-      it "sends destroys the requested blog entry" do
+      it "sends #destroy to the requested blog entry" do
         @blog_entry.should have_received(:destroy)
       end
     end
