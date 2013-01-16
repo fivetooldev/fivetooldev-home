@@ -44,3 +44,7 @@ jQuery(document).ready ->
     latitude: 38.9205787,
     longitude: -77.0419928,
     zoom: 14
+
+  if jQuery('#blog').length > 0
+    console.log('resetting nav')
+    markNavForBlogPosts()
