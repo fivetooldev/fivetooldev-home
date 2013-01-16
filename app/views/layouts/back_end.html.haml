@@ -1,0 +1,10 @@
+!!! html
+%html{lang: "en"}
+  = render template: 'layouts/header'
+
+  %body
+    = link_to('Sign Out', sign_out_path, method: :delete)
+
+    = yield
+
+    = javascript_include_tag :application

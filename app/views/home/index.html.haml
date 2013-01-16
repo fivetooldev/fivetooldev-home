@@ -1,135 +1,89 @@
-!!! html
-%html{lang: "en"}
-  %head
-    %meta{charset: "utf-8"}
-    %title Five Tool Development: Software Consulting and Ruby on Rails Development
-    %meta{name: "viewport", content: "width=device-width, initial-scale=1.0"}
-    %meta{name: "description", content: ""}
-    %meta{name: "author", content: ""}
-
-    / Le styles
-    = stylesheet_link_tag :application
-
-    /= stylesheet_link_tag 'http://fonts.googleapis.com/css?family=Open+Sans:400,300'
-
-    / Le fav and touch icons
-    %link{rel: "apple-touch-icon-precomposed", sizes: "144x144", href: "ico/apple-touch-icon-144-precomposed.png"}
-    %link{rel: "apple-touch-icon-precomposed", sizes: "114x114", href: "ico/apple-touch-icon-114-precomposed.png"}
-    %link{rel: "apple-touch-icon-precomposed", sizes: "72x72", href: "ico/apple-touch-icon-72-precomposed.png"}
-    %link{rel: "apple-touch-icon-precomposed", href: "ico/apple-touch-icon-57-precomposed.png"}
-
-  %body#home{data: {spy: "scroll", target: ".navbar"}}
-
-    .row.header
-      %nav.navbar.navbar-fixed-top
-        .navbar-inner
-          .container
-            %a.btn.btn-navbar.m-btn.blue{data: {toggle: "collapse", target: ".nav-collapse"}}
-              %span.icon-bar
-              %span.icon-bar
-              %span.icon-bar
+.full.callout
+  .container
+    .row
+      .span12.companycallout
+        %h1 Five Tool Dev
 
 
-            %h1.brand
-              %a{href: "/"} Five Tool Development
+#about.row-fluid.section
+  .container
+    .explain
+      %h2 about us
+      %p.intro Five Tool Development helps small companies do big things.
 
-            .nav-collapse
-              %ul.nav.pull-right
-                %li
-                  %a.anchorLink{href: "#home"} Home
-                %li
-                  %a.anchorLink{href: "#about"} About
-                %li
-                  %a.anchorLink{href: "#contact"} Contact
+    .row
+      .span6
+        %h3 Development
+        %p We use the best technologies for the job. Whether your project is building something new from scratch or a rehabilitating an existing application to give it new life, Five Tool can bring your idea to successful execution.
 
+        %p
+          Five Tool Dev works with:
+          %ul
+            %li Ruby on Rails
+            %li PostgreSQL and MySQL databases
+            %li Heroku
+            %li jQuery and jQuery Mobile
+            %li Backbone.js
+            %li and more...
 
-    .full.callout
-      .container
-        .row
-          .span12.companycallout
-            %h1 Five Tool Dev
+      .span6
+        %h3 Consulting
+        %p You have a dream, and we'll help you guide it to launch and success. Five Tool Development can provide the services and advice of a chief technology officer (CTO) at a fraction of the cost of hiring a permanent, full-time team member. We can answer questions about design, architecture, hosting, and hiring. We'll help you find the best resources for your budget. When your launch takes off, you'll already have a plan in place to keep up with growth.
 
+#contact.row.section
+  / MAP ###############################################
+  %div
+    .container
+      %h2 Contact
+      %p.intro Five Tool Development is located in Adams Morgan, the capital of fun in our nation's capital.
 
-    #about.row-fluid.section
-      .container
-        .explain
-          %h2 about us
-          %p.intro Five Tool Development helps small companies do big things.
+    #map.container.hidden-phone
 
-        .row
-          .span6
-            %h3 Development
-            %p We use the best technologies for the job. Whether your project is building something new from scratch or a rehabilitating an existing application to give it new life, Five Tool can bring your idea to successful execution.
+#form
+  .container
+    .row
+      .span8
+        %h3 Get in touch with us
+        %p Fill out the form below and we will hit you back in a flash.
 
-            %p
-              Five Tool Dev works with:
-              %ul
-                %li Ruby on Rails
-                %li PostgreSQL and MySQL databases
-                %li Heroku
-                %li jQuery and jQuery Mobile
-                %li Backbone.js
-                %li and more...
+        %form#new_contact_message.new_contact_message{action: "/contact_messages", method: "post"}
+          %fieldset
+            .row
+              .holder.span8
+                .message
+                  .top
+                  #alert.contents
+                  .bottom
+                  .field.span8
+                    %input#new_contact_message_name.input-text.m-wrap.m-ctrl-large{type: "text", value: "", name: "contact_message[name]", placeholder: "Your Name"}
 
-          .span6
-            %h3 Consulting
-            %p You have a dream, and we'll help you guide it to launch and success. Five Tool Development can provide the services and advice of a chief technology officer (CTO) at a fraction of the cost of hiring a permanent, full-time team member. We can answer questions about design, architecture, hosting, and hiring. We'll help you find the best resources for your budget. When your launch takes off, you'll already have a plan in place to keep up with growth.
+                  .field.span8
+                    %input#new_contact_message_email_address.input-text.m-wrap.m-ctrl-large{type: "text", value: "", name: "contact_message[email_address]",  placeholder: "Your Email Address"}
 
-    #contact.row.section
-      / MAP ###############################################
-      %div
-        .container
-          %h2 Contact
-          %p.intro Five Tool Development is located in Adams Morgan, the capital of fun in our nation's capital.
+                  .field.span8
+                    %textarea#new_contact_message_message.input-textarea.m-wrap.m-ctrl-large{placeholder: "Your Message", name: "contact_message[message]"}
 
-        #map.container.hidden-phone
+                  .field.span8
+                    %input.m-btn.green{type: "submit", value: "Send Message"}
 
-    #form
-      .container
-        .row
-          .span8
-            %h3 Get in touch with us
-            %p Fill out the form below and we will hit you back in a flash.
+      .span3.offset1
+        %h3 Contact info
 
-            %form#new_contact_message.new_contact_message{action: "/contact_messages", method: "post"}
-              %fieldset
-                .row
-                  .holder.span8
-                    .message
-                      .top
-                      #alert.contents
-                      .bottom
-                      .field.span8
-                        %input#new_contact_message_name.input-text.m-wrap.m-ctrl-large{type: "text", value: "", name: "contact_message[name]", placeholder: "Your Name"}
+        %p
+          %address
+            %strong Five Tool Development
+            %br
+            1760 Euclid Street NW, #502
+            %br
+            Washington, DC 20009
+            %br
+            %b ph
+            202.507.9041
+            %br
+            %b em
+            %a{href: "mailto:info@fivetool.io"} info@fivetool.io
+            %br
+            %b tw
+            %a{href: "http://twitter.com/fivetooldev"}@fivetooldev
 
-                      .field.span8
-                        %input#new_contact_message_email_address.input-text.m-wrap.m-ctrl-large{type: "text", value: "", name: "contact_message[email_address]",  placeholder: "Your Email Address"}
-
-                      .field.span8
-                        %textarea#new_contact_message_message.input-textarea.m-wrap.m-ctrl-large{placeholder: "Your Message", name: "contact_message[message]"}
-
-                      .field.span8
-                        %input.m-btn.green{type: "submit", value: "Send Message"}
-
-          .span3.offset1
-            %h3 Contact info
-
-            %p
-              %address
-                %strong Five Tool Development
-                %br
-                1760 Euclid Street NW, #502
-                %br
-                Washington, DC 20009
-                %br
-                %b ph
-                202.507.9041
-                %br
-                %b em
-                %a{href: "mailto:info@fivetool.io"} info@fivetool.io
-                %br
-                %b tw
-                %a{href: "http://twitter.com/fivetooldev"}@fivetooldev
-
-    = javascript_include_tag :application
-    = javascript_include_tag "http://maps.google.com/maps/api/js?sensor=false"
+= javascript_include_tag "http://maps.google.com/maps/api/js?sensor=false"

@@ -1,5 +1,7 @@
 class BlogEntriesController < ApplicationController
 
+  layout 'back_end'
+
   before_filter :authorize
   before_filter :find_blog_entry, 
     only: [:show, :edit, :update, :destroy]

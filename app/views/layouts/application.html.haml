@@ -1,1 +1,32 @@
-= yield
+!!! html
+%html{lang: "en"}
+  = render template: 'layouts/header'
+
+  %body#home{data: {spy: "scroll", target: ".navbar"}}
+
+    .row.header
+      %nav.navbar.navbar-fixed-top
+        .navbar-inner
+          .container
+            %a.btn.btn-navbar.m-btn.blue{data: {toggle: "collapse", target: ".nav-collapse"}}
+              %span.icon-bar
+              %span.icon-bar
+              %span.icon-bar
+
+
+            %h1.brand
+              %a{href: "/"} Five Tool Development
+
+            .nav-collapse
+              %ul.nav.pull-right
+                %li
+                  %a.anchorLink{href: "#home"} Home
+                %li
+                  %a.anchorLink{href: "#about"} About
+                %li
+                  %a.anchorLink{href: "#contact"} Contact
+                %li
+                  %a.anchorLink{href: "#"} Blog
+
+    = yield
+    = javascript_include_tag :application
