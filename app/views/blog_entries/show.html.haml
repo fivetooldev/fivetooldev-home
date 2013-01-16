@@ -1,18 +1,13 @@
 %p#notice= notice
 
-%p
-  %b Author:
-  = @blog_entry.author
-%p
-  %b Published at:
-  = @blog_entry.published_at
-%p
-  %b Title:
-  = @blog_entry.title
-%p
-  %b Content:
-  = raw @blog_entry.content
+= render @blog_entry
+
 
 = link_to 'Edit', edit_blog_entry_path(@blog_entry)
 \|
 = link_to 'Back', blog_entries_path
+
+- 5.times do
+  %br
+
+= link_to 'Destroy', @blog_entry, method: :delete, data: { confirm: 'Are you sure?' }
