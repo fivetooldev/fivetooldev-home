@@ -3,8 +3,29 @@
   = render template: 'layouts/head_tag'
 
   %body#home{data: {spy: "scroll", target: ".navbar"}}
+    .row.header
+      %nav.navbar.navbar-fixed-top
+        .navbar-inner
+          .container
+            %a.btn.btn-navbar.m-btn.blue{data: {toggle: "collapse", target: ".nav-collapse"}}
+              %span.icon-bar
+              %span.icon-bar
+              %span.icon-bar
 
-    = render template: 'layouts/header'
+
+            %h1.brand
+              %a{href: "/"} Five Tool Development
+
+            .nav-collapse
+              %ul.nav.pull-right
+                %li
+                  %a.anchorLink{href: '/'} Home
+                %li
+                  %a.anchorLink{href: '/#about'} About
+                %li
+                  %a.anchorLink{href: '/#contact'} Contact
+                %li
+                  %a.anchorLink{href: '/blog#posts'} Blog
 
     #blog.row-fluid.section
       .container
