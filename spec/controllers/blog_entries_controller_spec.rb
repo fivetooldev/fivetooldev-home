@@ -43,7 +43,9 @@ describe BlogEntriesController, :blog_entry, :controller do
 
         it { should assign_to(:blog_entries).with([@blog_entry]) }
         it { should render_template(:index) }
-        it_should_respond_with_application_layout_html_and_success
+        it { should render_with_layout(:back_end) }
+        it { should respond_with_content_type(:html) }
+        it { should respond_with(:success) }
       end
 
       describe "GET show" do
@@ -51,7 +53,9 @@ describe BlogEntriesController, :blog_entry, :controller do
 
         it { should assign_to(:blog_entry).with(@blog_entry) }
         it { should render_template(:show) }
-        it_should_respond_with_application_layout_html_and_success
+        it { should render_with_layout(:back_end) }
+        it { should respond_with_content_type(:html) }
+        it { should respond_with(:success) }
       end
 
       describe "GET new" do
@@ -59,7 +63,9 @@ describe BlogEntriesController, :blog_entry, :controller do
   
         it { should assign_to(:blog_entry).with(@new_blog_entry) }
         it { should render_template(:new) }
-        it_should_respond_with_application_layout_html_and_success
+              it { should render_with_layout(:back_end) }
+          it { should respond_with_content_type(:html) }
+      it { should respond_with(:success) }
       end
   
       describe "GET edit" do
@@ -67,7 +73,9 @@ describe BlogEntriesController, :blog_entry, :controller do
   
         it { should assign_to(:blog_entry).with(@blog_entry) }
         it { should render_template(:edit) }
-        it_should_respond_with_application_layout_html_and_success
+        it { should render_with_layout(:back_end) }
+        it { should respond_with_content_type(:html) }
+        it { should respond_with(:success) }
       end
     end
 
@@ -102,7 +110,9 @@ describe BlogEntriesController, :blog_entry, :controller do
 
         it { should assign_to(:blog_entry).with(@new_blog_entry) }
         it { should render_template(:new) }
-        it_should_respond_with_application_layout_html_and_success
+        it { should render_with_layout(:back_end) }
+        it { should respond_with_content_type(:html) }
+        it { should respond_with(:success) }
 
         it "passes the parameters to BlogEntry.new" do
           BlogEntry.should have_received(:new).with(attributes)
@@ -142,7 +152,9 @@ describe BlogEntriesController, :blog_entry, :controller do
   
         it { should assign_to(:blog_entry).with(@blog_entry) }
         it { should render_template(:edit) }
-        it_should_respond_with_application_layout_html_and_success
+              it { should render_with_layout(:back_end) }
+      it { should respond_with_content_type(:html) }
+      it { should respond_with(:success) }
 
         it "calls #update_attribute on the blog entry" do
           @blog_entry.should have_received(:update_attributes)

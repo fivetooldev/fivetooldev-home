@@ -1,19 +1,23 @@
-!!! html
-%html{lang: "en"}
-  %head
-    %meta{charset: "utf-8"}
-    %title Five Tool Development: Software Consulting and Ruby on Rails Development
-    %meta{name: "viewport", content: "width=device-width, initial-scale=1.0"}
-    %meta{name: "description", content: ""}
-    %meta{name: "author", content: ""}
+.row.header
+  %nav.navbar.navbar-fixed-top
+    .navbar-inner
+      .container
+        %a.btn.btn-navbar.m-btn.blue{data: {toggle: "collapse", target: ".nav-collapse"}}
+          %span.icon-bar
+          %span.icon-bar
+          %span.icon-bar
 
-    / Le styles
-    = stylesheet_link_tag :application
 
-    /= stylesheet_link_tag 'http://fonts.googleapis.com/css?family=Open+Sans:400,300'
+        %h1.brand
+          %a{href: "/"} Five Tool Development
 
-    / Le fav and touch icons
-    %link{rel: "apple-touch-icon-precomposed", sizes: "144x144", href: "ico/apple-touch-icon-144-precomposed.png"}
-    %link{rel: "apple-touch-icon-precomposed", sizes: "114x114", href: "ico/apple-touch-icon-114-precomposed.png"}
-    %link{rel: "apple-touch-icon-precomposed", sizes: "72x72", href: "ico/apple-touch-icon-72-precomposed.png"}
-    %link{rel: "apple-touch-icon-precomposed", href: "ico/apple-touch-icon-57-precomposed.png"}
+        .nav-collapse
+          %ul.nav.pull-right
+            %li
+              %a.anchorLink{href: "#home"} Home
+            %li
+              %a.anchorLink{href: "#about"} About
+            %li
+              %a.anchorLink{href: "#contact"} Contact
+            %li
+              %a.anchorLink{href: "#"} Blog
