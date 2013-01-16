@@ -112,12 +112,12 @@ nav.primary ul li a:hover {
 
 .header{ padding:0px;}
 
-.callout{background:#f30; padding:60px 0;}
+.callout{background:#f30; padding: 0 0;}
 .section{padding:4.5% 0; border-bottom: 1px solid #CCC;}
 
 .companycallout{ margin-bottom:20px;}
 .companycallout p{text-align: center;}
-.companycallout h1{text-transform: uppercase; font-size:10em; line-height:2em; color:#fff; text-align: center;}
+.companycallout h1{text-transform: uppercase; font-size:7em; line-height:2em; color:#fff; text-align: center;}
 .companycallout h2{font-size:47px;line-height:67px; font-weight:300; text-transform: uppercase;}
 
 /*CALLOUT*/
