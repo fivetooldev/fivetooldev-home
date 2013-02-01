@@ -23,7 +23,7 @@ group :development, :test do
   gem 'letter_opener'
   gem 'factory_girl_rails'
   gem 'quiet_assets'
-  gem 'rspec-rails'
+  gem 'rspec-rails', '~> 2.12.2'
   gem 'shoulda-matchers'
 end
 
