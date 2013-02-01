@@ -4,6 +4,8 @@ development: &default
   user: geoff
   pool: 5
   timeout: 5000
+  host: localhost
+  min_messages: warning
 
 test:
   <<: *default
