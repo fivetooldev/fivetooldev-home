@@ -6,12 +6,12 @@ class ContactMessagesController < ApplicationController
     if @contact_message.save
       deliver_notification_email
 
-      redirect_to root_path, 
-        notice: 'Thanks for contacting us. We will be in touch shortly.'
+      notice = 'Thanks for contacting us. We will be in touch shortly.'
     else
-      redirect_to root_path,
-        notice: 'There was a problem with your submission. Please try again or email us at info@fivetool.io'
+      notice =  'There was a problem with your submission. Please try again or email us at info@fivetool.io'
     end
+
+    redirect_to root_path, notice: notice
   end
 
   private
