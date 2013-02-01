@@ -29,7 +29,7 @@ describe BlogEntry, :blog_entry, :model do
       context 'with a published article' do
         let(:blog_entry) { create(:blog_entry, published_at: Time.new(2013,1,1)) }
 
-        it 'sets the published_at time' do
+        it 'does not change published_at time' do
           blog_entry.publish
 
           blog_entry.published_at.should eq(Time.new(2013,1,1))
