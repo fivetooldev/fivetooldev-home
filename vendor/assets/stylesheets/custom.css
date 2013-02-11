@@ -180,4 +180,6 @@ h2.explain{line-height:34px;}
 
 #blog article{margin: 0px auto; padding-bottom: 80px; max-width: 880px;}
 
-#tag-line{margin-top: 40px;}
+#tag-line{margin-top: 60px;}
+.first-snippet {color: #6A6A6A; font-weight:400; text-align: center; font-size:3em; line-height: 1.6em;}
+
