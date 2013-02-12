@@ -17,8 +17,6 @@ end
 gem 'jquery-rails'
 gem 'haml-rails'
 
-gem 'clearance'
-
 group :development, :test do
   gem 'letter_opener'
   gem 'factory_girl_rails'

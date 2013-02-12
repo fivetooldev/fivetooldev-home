@@ -6,7 +6,6 @@ ENV["RAILS_ENV"] ||= 'test'
 require File.expand_path("../../config/environment", __FILE__)
 require 'rspec/rails'
 require 'rspec/autorun'
-require 'clearance/testing'
 
 # Requires supporting ruby files with custom matchers and macros, etc,
 # in spec/support/ and its subdirectories.
@@ -56,9 +55,5 @@ RSpec.configure do |config|
 
   config.after do
     DatabaseCleaner.clean
-  end
-
-  config.before(:all) do
-    @user = create(:user)
   end
 end
