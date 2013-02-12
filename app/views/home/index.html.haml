@@ -59,13 +59,13 @@
                     %input#new_contact_message_name.input-text.m-wrap.m-ctrl-large{type: "text", value: "", name: "contact_message[name]", placeholder: "Your Name"}
 
                   .field.span8
-                    %input#new_contact_message_email_address.input-text.m-wrap.m-ctrl-large{type: "text", value: "", name: "contact_message[email_address]",  placeholder: "Your Email Address"}
+                    %input#new_contact_message_email_address.input-text.m-wrap.m-ctrl-large{type: "email", value: "", name: "contact_message[email_address]",  placeholder: "Your Email Address"}
 
                   .field.span8
-                    %textarea#new_contact_message_message.input-textarea.m-wrap.m-ctrl-large{placeholder: "Your Message", name: "contact_message[message]"}
+                    %textarea#new_contact_message_message.input-textarea.m-wrap.m-ctrl-large{type: "text", placeholder: "Your Message", name: "contact_message[message]"}
 
                   .field.span8
-                    %input.m-btn.green{type: "submit", value: "Send Message"}
+                    %input.m-btn.green{type: "submit", value: "Send to Us"}
 
       .span3.offset1
         %h3 Contact info
@@ -78,11 +78,12 @@
             %br
             Washington, DC 20009
             %br
-            %b ph
+            %i.icon.icon-bell
             202.507.9041
             %br
-            %b em
+            %i.icon.icon-envelope
             %a{href: "mailto:info@fivetool.io"} info@fivetool.io
             %br
-            %b tw
-            %a{href: "http://twitter.com/fivetooldev"}@fivetooldev
+            %a.twitter-follow-button{href: "https://twitter.com/FiveToolDev", data: {'show-count' => "false"}} Follow @FiveToolDev
+            :javascript
+              !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
