@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 ruby "1.9.3"
 
-gem 'rails', '3.2.12'
+gem 'rails', '3.2.13'
 
 gem 'pg'
 gem 'thin'
@@ -17,21 +17,30 @@ end
 gem 'jquery-rails'
 gem 'haml-rails'
 
-group :development, :test do
-  gem 'letter_opener'
-  gem 'factory_girl_rails'
+group :development do
+  gem 'better_errors'
+  gem 'binding_of_caller'
+  gem 'bullet'
+  gem 'foreman'
   gem 'quiet_assets'
-  gem 'rspec-rails', '~> 2.12.2'
+end
+
+group :development, :test do
+  gem 'factory_girl_rails'
+  gem 'letter_opener'
+  gem 'quiet_assets'
+  gem 'rspec-rails'
   gem 'shoulda-matchers'
 end
 
 group :test do
   gem 'action_mailer_cache_delivery'
+  gem 'bourne'
   gem 'capybara-webkit'
   gem 'cucumber-rails'
   gem 'database_cleaner'
   gem 'email_spec'
-  gem 'bourne'
-  gem 'timecop'
+  gem 'rspec'
   gem 'simplecov', require: false
+  gem 'timecop'
 end
