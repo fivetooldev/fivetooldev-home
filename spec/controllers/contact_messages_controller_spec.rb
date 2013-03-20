@@ -29,7 +29,6 @@ describe ContactMessagesController, :blog_entry, :controller do
     describe "with valid params" do
       before { post :create, contact_message: attributes_for(:contact_message) }
 
-      it { should assign_to(:contact_message).with_kind_of(ContactMessage) }
       it { should redirect_to(root_path) }
       it { should respond_with(:redirect) }
       it { should set_the_flash[:notice]
@@ -40,11 +39,10 @@ describe ContactMessagesController, :blog_entry, :controller do
         controller.should have_received(:deliver_notification_email)
       end
     end
-  
+
     describe "with invalid params" do
       before { post :create, contact_message: {} }
 
-      it { should assign_to(:contact_message).with_kind_of(ContactMessage) }
       it { should redirect_to(root_path) }
       it { should respond_with(:redirect) }
       it { should set_the_flash[:notice]
@@ -60,7 +58,7 @@ describe ContactMessagesController, :blog_entry, :controller do
   describe "#deliver_notification_email" do
     include EmailSpec::Helpers
     include EmailSpec::Matchers
-    
+
     it "sends an email" do
       message = stub('a message', deliver: true)
       ContactMailer.stubs(signup_confirmation: message)
@@ -71,5 +69,5 @@ describe ContactMessagesController, :blog_entry, :controller do
       message.should have_received(:deliver)
     end
   end
- 
+
 end
