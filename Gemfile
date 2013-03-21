@@ -44,3 +44,7 @@ group :test do
   gem 'simplecov', require: false
   gem 'timecop'
 end
+
+group :production do
+  gem 'rails_version'
+end

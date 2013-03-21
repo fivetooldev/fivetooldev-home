@@ -88,7 +88,7 @@ GEM
     factory_girl_rails (4.2.1)
       factory_girl (~> 4.2.0)
       railties (>= 3.0.0)
-    ffi (1.4.0)
+    ffi (1.5.0)
     foreman (0.62.0)
       thor (>= 0.13.6)
     gherkin (2.11.6)
@@ -140,6 +140,7 @@ GEM
       activesupport (= 3.2.13)
       bundler (~> 1.0)
       railties (= 3.2.13)
+    rails_version (0.2.3)
     railties (3.2.13)
       actionpack (= 3.2.13)
       activesupport (= 3.2.13)
@@ -229,6 +230,7 @@ DEPENDENCIES
   pg
   quiet_assets
   rails (= 3.2.13)
+  rails_version
   rspec
   rspec-rails
   sass-rails (~> 3.2.3)
