@@ -45,9 +45,7 @@ describe ContactMessagesController, :blog_entry, :controller do
 
       it { should redirect_to(root_path) }
       it { should respond_with(:redirect) }
-      it { should set_the_flash[:notice]
-        .to('There was a problem with your submission. Please try again or email us at info@fivetool.io')
-      }
+      it { should set_the_flash[:error] }
     end
 
     it "does not send an email" do
