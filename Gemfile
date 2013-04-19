@@ -36,7 +36,7 @@ group :test do
   gem 'action_mailer_cache_delivery'
   gem 'bourne'
   gem 'capybara-webkit'
-  gem 'cucumber-rails'
+  gem 'cucumber-rails', require: false
   gem 'database_cleaner'
   gem 'email_spec'
   gem 'rspec'
