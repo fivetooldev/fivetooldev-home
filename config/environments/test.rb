@@ -37,3 +37,7 @@ Fivetool::Application.configure do
   config.active_support.deprecation = :stderr
 
 end
+
+if Rails.env.test?
+  ENV['RAILS_SECRET_TOKEN'] = '23cf389ccb9ecc2adc9d88d25154ff7504f2c1c5dca1c9d8a9ad59eb269e4e494e61fa034d1005555bc33deb633c63321e3e9febfe94ecaa2407578cb82cfeb2'
+end
