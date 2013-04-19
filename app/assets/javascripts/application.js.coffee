@@ -27,6 +27,9 @@
 #= require google-analytics
 #= require_tree .
 
+window.display_thanks_modal = ->
+  jQuery('#thanks').modal('show');
+
 jQuery(document).ready ->
   jQuery("#map").gMap
     controls: false,
@@ -48,3 +51,4 @@ jQuery(document).ready ->
   if jQuery('#blog').length > 0
     console.log('resetting nav')
     markNavForBlogPosts()
+
