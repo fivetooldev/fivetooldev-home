@@ -25,6 +25,7 @@ group :development do
 end
 
 group :development, :test do
+  gem 'cane'
   gem 'factory_girl_rails'
   gem 'letter_opener'
   gem 'quiet_assets'
