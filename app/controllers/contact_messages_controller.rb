@@ -4,7 +4,7 @@ class ContactMessagesController < ApplicationController
     @contact_message = ContactMessage.new(params[:contact_message])
 
     if @contact_message.save
-      #deliver_notification_email
+      deliver_notification_email
 
       notice = 'Thanks for contacting us. We will be in touch shortly.'
     else
