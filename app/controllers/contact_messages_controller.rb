@@ -34,7 +34,7 @@ class ContactMessagesController < ApplicationController
   def set_error_flash_message
     flash[:error] = <<-heredoc
       There was a problem with your submission. Please try again or email
-      us at info@fivetool.io
+      us at info@fivetool.io.
     heredoc
   end
 
