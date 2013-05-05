@@ -27,7 +27,11 @@ describe ContactMessagesController, :blog_entry, :controller do
     end
 
     describe "with valid params" do
-      before { post :create, contact_message: attributes_for(:contact_message) }
+      before do
+        ContactMessage.any_instance.stubs(save: true)
+
+        post :create, contact_message: attributes_for(:contact_message)
+      end
 
       it { should redirect_to(root_path) }
       it { should respond_with(:redirect) }
@@ -41,7 +45,11 @@ describe ContactMessagesController, :blog_entry, :controller do
     end
 
     describe "with invalid params" do
-      before { post :create, contact_message: {} }
+      before do
+        ContactMessage.any_instance.stubs(save: false)
+
+        post :create, contact_message: attributes_for(:contact_message)
+      end
 
       it { should redirect_to(root_path) }
       it { should respond_with(:redirect) }

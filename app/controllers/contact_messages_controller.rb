@@ -20,7 +20,11 @@ class ContactMessagesController < ApplicationController
   private
 
   def build_contact_message
-    @contact_message = ContactMessage.new(params[:contact_message])
+    @contact_message = ContactMessage.new(contact_message_params)
+  end
+
+  def contact_message_params
+    params.require(:contact_message).permit(:email_address, :message, :name)
   end
 
   def deliver_notification_email
