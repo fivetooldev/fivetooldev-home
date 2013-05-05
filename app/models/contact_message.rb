@@ -3,8 +3,6 @@
 ##
 class ContactMessage < ActiveRecord::Base
 
-  include ActiveModel::ForbiddenAttributesProtection
-
   validates :email_address, presence: true, email: true
   validates_presence_of :name
 

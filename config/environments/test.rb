@@ -1,6 +1,9 @@
 Fivetool::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb
 
+  # Rails 4 addition
+  config.eager_load = false
+
   # The test environment is used exclusively to run your application's
   # test suite. You never need to work with it otherwise. Remember that
   # your test database is "scratch space" for the test suite and is wiped
@@ -22,7 +25,7 @@ Fivetool::Application.configure do
   config.action_dispatch.show_exceptions = false
 
   # Disable request forgery protection in test environment
-  config.action_controller.allow_forgery_protection    = false
+  config.action_controller.allow_forgery_protection = false
 
   # Tell Action Mailer not to deliver emails to the real world.
   # The :test delivery method accumulates sent emails in the
@@ -30,14 +33,13 @@ Fivetool::Application.configure do
   # config.action_mailer.delivery_method = :test
   config.action_mailer.delivery_method = :cache
 
-  # Raise exception on mass assignment protection for Active Record models
-  config.active_record.mass_assignment_sanitizer = :strict
-
   # Print deprecation notices to the stderr
   config.active_support.deprecation = :stderr
 
 end
 
 if Rails.env.test?
-  ENV['RAILS_SECRET_TOKEN'] = '23cf389ccb9ecc2adc9d88d25154ff7504f2c1c5dca1c9d8a9ad59eb269e4e494e61fa034d1005555bc33deb633c63321e3e9febfe94ecaa2407578cb82cfeb2'
+  ENV['RAILS_SECRET_TOKEN'] = 'f0530f5e6f287c4bfe19436cdd633da9'
+
+  ENV['RAILS_SECRET_KEY_BASE'] = 'b43926b696e9f11afcfb0b3441e2a61f'
 end
