@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 ruby "2.0.0"
 
+gem 'email_validator'
 gem 'haml-rails'
 gem 'jquery-rails'
 gem 'pg'
