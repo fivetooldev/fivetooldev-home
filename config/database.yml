@@ -11,3 +11,7 @@ test:
   <<: *default
   database: fivetooldev-test
   min_messages: error
+
+production:
+  <<: *default
+  database: fivetooldev-production
