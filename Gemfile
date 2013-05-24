@@ -10,12 +10,9 @@ gem 'rails', '4.0.0.rc1'
 gem 'thin'
 
 group :assets do
-  gem 'sass-rails',   '~> 4.0.0.rc1'
-  gem 'coffee-rails', '~> 4.0.0.rc1'
-  gem 'sprockets-rails', :require => 'sprockets/railtie'
-  # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-  # gem 'therubyracer', platforms: :ruby
-
+  gem 'sass-rails',   '~> 4.0.0.rc1', require: 'sass'
+  gem 'coffee-rails', '~> 4.0.0.rc1', require: 'coffee_script'
+  gem 'sprockets-rails', require: 'sprockets/railtie'
   gem 'uglifier', '>= 1.3.0'
 end
 
