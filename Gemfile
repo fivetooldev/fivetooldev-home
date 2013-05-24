@@ -7,7 +7,6 @@ gem 'haml-rails'
 gem 'jquery-rails'
 gem 'pg'
 gem 'rails', '4.0.0.rc1'
-#gem 'strong_parameters'
 gem 'thin'
 
 group :assets do
