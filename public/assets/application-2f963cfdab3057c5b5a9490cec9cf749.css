@@ -1,0 +1,402 @@
+/* Global Reset
+------------------------------------------------------------------------------*/
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+body {
+  color: white;
+  font-family: "Lato";
+  font-size: 16px;
+  line-height: 29px; }
+
+footer {
+  background-color: #3d3d3c; }
+  footer a, footer a:visited, footer a:active, footer a:hover {
+    color: #3d3d3c;
+    text-decoration: none; }
+  footer section.copyright-tag {
+    display: block;
+    float: left;
+    margin-right: 2.35765%;
+    width: 74.41059%; }
+    footer section.copyright-tag:last-child {
+      margin-right: 0; }
+    @media screen and (max-width: 761px) {
+      footer section.copyright-tag {
+        padding: 25.888px 41.88678px;
+        width: 100%; } }
+  footer section.address {
+    display: block;
+    float: left;
+    margin-right: 2.35765%;
+    width: 23.23176%; }
+    footer section.address:last-child {
+      margin-right: 0; }
+    @media screen and (max-width: 761px) {
+      footer section.address {
+        padding: 0 41.88678px;
+        width: 100%; }
+        footer section.address:not(:last-child) {
+          margin-bottom: 46.922px; } }
+
+em {
+  font-style: italic; }
+
+strong {
+  font-weight: 600; }
+
+header.site-header {
+  color: #3d3d3c;
+  margin: auto 29px;
+  padding: 29px 0; }
+  header.site-header a, header.site-header a:visited, header.site-header a:active, header.site-header a:hover {
+    color: #3d3d3c;
+    text-decoration: none; }
+  header.site-header .logo {
+    display: block;
+    float: left;
+    margin-right: 2.35765%;
+    width: 40.29137%; }
+    header.site-header .logo:last-child {
+      margin-right: 0; }
+    @media screen and (max-width: 761px) {
+      header.site-header .logo {
+        background-size: 100%;
+        width: 100%; }
+        header.site-header .logo h1 {
+          text-align: center;
+          background-attachment: fixed;
+          background-position: center; } }
+    header.site-header .logo .brand {
+      background: url("/assets/five-tools-logo-01.png") no-repeat;
+      background-size: 287.07217px;
+      color: transparent;
+      height: 75.9198px; }
+  header.site-header nav {
+    display: block;
+    float: left;
+    margin-right: 2.35765%;
+    width: 57.35098%;
+    margin-top: 29px;
+    margin-bottom: 29px; }
+    header.site-header nav:last-child {
+      margin-right: 0; }
+    @media screen and (max-width: 761px) {
+      header.site-header nav {
+        padding: 0 41.88678px;
+        width: 100%; }
+        header.site-header nav:not(:last-child) {
+          margin-bottom: 46.922px; } }
+    @media screen and (max-width: 761px) {
+      header.site-header nav {
+        padding-left: 0;
+        margin-bottom: 0; } }
+    header.site-header nav ul {
+      list-style-type: none;
+      margin-right: 16px; }
+      @media screen and (max-width: 761px) {
+        header.site-header nav ul {
+          float: none; } }
+    header.site-header nav li {
+      border-radius: 6px;
+      color: #9e9d9c;
+      display: inline;
+      font-size: 25.888px;
+      margin-left: 17.92336px;
+      padding: 16px 25.888px; }
+      @media screen and (max-width: 761px) {
+        header.site-header nav li {
+          padding: 6.11171px;
+          margin-left: 0;
+          display: block; } }
+      header.site-header nav li:hover {
+        background-color: #9e9d9c; }
+        header.site-header nav li:hover a {
+          color: white; }
+        @media screen and (max-width: 761px) {
+          header.site-header nav li:hover {
+            background: none; }
+            header.site-header nav li:hover a {
+              color: #3d3d3c; } }
+
+section {
+  margin: 0;
+  padding: 75.9198px 0; }
+  section h2 {
+    text-align: center;
+    font-size: 41.88678px;
+    line-height: 75.9198px;
+    margin-bottom: 29px; }
+    @media screen and (max-width: 761px) {
+      section h2 {
+        padding-left: 41.88678px;
+        padding-right: 41.88678px; } }
+  section h3 {
+    text-align: center;
+    font-size: 25.888px;
+    line-height: 46.922px;
+    margin-bottom: 16px; }
+  @media screen and (max-width: 761px) {
+    section {
+      padding: 46.922px 0; }
+      section h2 {
+        margin-bottom: 0; } }
+
+ul.social-links, ul.bio-social-links {
+  list-style-type: none;
+  margin-top: 25px; }
+  ul.social-links a, ul.bio-social-links a, ul.social-links a:visited, ul.bio-social-links a:visited, ul.social-links a:active, ul.bio-social-links a:active, ul.social-links a:hover, ul.bio-social-links a:hover {
+    color: #3d3d3c;
+    text-decoration: none; }
+  ul.social-links li, ul.bio-social-links li {
+    display: inline;
+    margin-right: 16px; }
+
+ul.bio-social-links {
+  text-align: center; }
+  ul.bio-social-links li {
+    margin-left: 16px;
+    margin-right: 16px; }
+
+a, a:visited, a:active, a:hover {
+  color: #3d3d3c;
+  font-weight: 600;
+  text-decoration: none; }
+
+p {
+  margin-bottom: 29px; }
+
+#get-in-touch {
+  display: block;
+  float: left;
+  margin-right: 2.35765%;
+  width: 48.82117%; }
+  #get-in-touch:last-child {
+    margin-right: 0; }
+  #get-in-touch h2 {
+    text-align: left; }
+  @media screen and (max-width: 761px) {
+    #get-in-touch {
+      width: 100%; }
+      #get-in-touch h2 {
+        text-align: center; } }
+
+.contact-form {
+  display: block;
+  float: left;
+  margin-right: 2.35765%;
+  width: 48.82117%; }
+  .contact-form:last-child {
+    margin-right: 0; }
+  .contact-form form input {
+    border-radius: 6px;
+    border-style: none;
+    font-size: 16px;
+    line-height: 29px;
+    margin-bottom: 9.88875px;
+    padding-left: 6px;
+    padding-right: 6px;
+    width: 100%; }
+  .contact-form form textarea {
+    border-radius: 6px;
+    border-style: none;
+    font-size: 16px;
+    height: 321.58115px;
+    padding-top: 6px;
+    padding-left: 6px;
+    padding-right: 6px;
+    width: 100%; }
+  .contact-form form input[type="submit"] {
+    background-color: white;
+    border-color: #3d3d3c;
+    border-radius: 6px;
+    border-style: solid;
+    border-width: 0.25px;
+    background-color: #e73d1e;
+    color: white; }
+    .contact-form form input[type="submit"]:hover {
+      background-color: #a12a15; }
+  @media screen and (max-width: 761px) {
+    .contact-form {
+      padding: 0 41.88678px;
+      width: 100%; }
+      .contact-form input, .contact-form textarea {
+        width: 100%; } }
+
+.about {
+  background-color: #9e9d9c; }
+  .about aside {
+    display: block;
+    float: left;
+    margin-right: 2.35765%;
+    width: 31.76157%; }
+    .about aside:last-child {
+      margin-right: 0; }
+    @media screen and (max-width: 761px) {
+      .about aside {
+        padding: 0 41.88678px;
+        width: 100%; }
+        .about aside:not(:last-child) {
+          margin-bottom: 46.922px; } }
+  .about article {
+    display: block;
+    float: left;
+    margin-right: 2.35765%;
+    width: 65.88078%; }
+    .about article:last-child {
+      margin-right: 0; }
+    @media screen and (max-width: 761px) {
+      .about article {
+        padding: 0 41.88678px;
+        width: 100%; }
+        .about article:not(:last-child) {
+          margin-bottom: 46.922px; } }
+  .about figure {
+    padding-top: 10px; }
+    .about figure img {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 17.92336px; }
+  .about figcaption {
+    text-align: center; }
+    .about figcaption strong {
+      font-style: bold;
+      font-size: 25.888px; }
+
+.banner {
+  background-color: #e73d1e; }
+
+.contact-us {
+  background-color: #9e9d9c; }
+
+.container {
+  *zoom: 1;
+  max-width: 1024px;
+  margin-left: auto;
+  margin-right: auto; }
+  .container:before, .container:after {
+    content: " ";
+    display: table; }
+  .container:after {
+    clear: both; }
+
+.jumbotron {
+  text-align: center; }
+
+.services {
+  background-color: #3d3d3c; }
+
+.portfolio, .technologies {
+  color: #3d3d3c; }
+
+.portfolio-item {
+  display: block;
+  float: left;
+  margin-right: 2.35765%;
+  width: 48.82117%;
+  margin-top: 46.922px; }
+  .portfolio-item:last-child {
+    margin-right: 0; }
+  .portfolio-item:nth-child(2n) {
+    margin-right: 0; }
+  .portfolio-item:nth-child(2n+1) {
+    clear: left; }
+  @media screen and (max-width: 761px) {
+    .portfolio-item {
+      padding: 0 41.88678px;
+      width: 100%; }
+      .portfolio-item:not(:last-child) {
+        margin-bottom: 46.922px; } }
+  .portfolio-item:nth-child(2n+1) {
+    padding-right: 41.88678px; }
+  .portfolio-item:nth-child(2n) {
+    padding-left: 41.88678px; }
+  .portfolio-item img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 38.19821%; }
+  .portfolio-item h4 {
+    text-align: center;
+    margin-bottom: 29px; }
+
+.service-item {
+  display: block;
+  float: left;
+  margin-right: 2.35765%;
+  width: 31.76157%; }
+  .service-item:last-child {
+    margin-right: 0; }
+  @media screen and (max-width: 761px) {
+    .service-item {
+      padding: 0 41.88678px;
+      width: 100%; }
+      .service-item:not(:last-child) {
+        margin-bottom: 46.922px; } }
+
+@media screen and (max-width: 761px) {
+  .hide-mobile {
+    display: none; } }
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+
+
+
+ */
