@@ -1,4 +1,4 @@
-$mobile: max-width 760px;
+$mobile: max-width 761px;
 $dark-gray: #3D3D3C;
 $light-gray: #9E9D9C;
 $bold-orange: #E73D1E;
@@ -84,7 +84,7 @@ header.site-header {
   padding: $base-line-height 0;
 
   .logo {
-    @include span-columns(6);
+    @include span-columns(5);
     @include media($mobile) {
       background-size: 100%;
       width: 100%;
@@ -105,7 +105,7 @@ header.site-header {
   }
 
   nav {
-    @include span-columns(6);
+    @include span-columns(7);
     @include column-as-full-width;
 
     @include media($mobile) {
