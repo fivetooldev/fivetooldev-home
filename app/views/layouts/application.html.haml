@@ -1,11 +1,65 @@
-!!! html
-%html{lang: "en"}
-  = render template: 'layouts/head_tag'
+!!! 5
+%html
+  %head
+    %meta(charset="utf-8")
+    %meta(name="ROBOTS" content="NOODP")
+    %title Five Tool Development: Custom Software Development and Consulting
+    = stylesheet_link_tag :application, :media => 'all'
+    = csrf_meta_tags
 
-  %body#home{data: {spy: "scroll", target: ".navbar"}}
+  %body
+    %header.site-header
+      .container
+        .logo
+          %a{href: root_path}
+            %h1.brand Five Tool Dev
 
-    = render template: 'layouts/header'
+        %nav
+          %ul
+            %li
+              %a{href: page_path("about")} about
+            %li
+              %a{href: 'http://blog.fivetool.io'} blog
+            %li
+              %a{href: root_path(anchor: 'contact-form')} contact
 
-    = yield
+    .content
 
-    = render template: 'layouts/footer'
+      = yield
+
+    %footer
+      .container
+        %section.copyright-tag
+          .copyright
+            &copy 2013 Five Tool Development, Inc.
+          %ul.social-links
+            %li
+              %a{href: "http://twitter.com/fivetooldev"}
+                = image_tag "twitter-flat.png", size: "40x40"
+            %li
+              %a{href: "http://facebook.com/fivetooldev"}
+                = image_tag "facebook-flat.png", size: "40x40"
+            %li
+              %a{href: "http://github.com/fivetooldev"}
+                = image_tag "github-flat.png", size: "40x40"
+            %li
+              %a{href: "http://blog.fivetool.io/rss"}
+                = image_tag "rss-flat.png", size: "40x40"
+
+        %section.address
+          %address
+            %strong Five Tool Development, Inc.
+            %br/
+            1760 Euclid Street NW, #502
+            %br/
+            Washington, DC 20009
+            %br/
+            %i.icon-phone
+            202.507.9041
+            %br/
+            %i.icon-envelope
+            %em= mail_to "info@fivetool.io"
+            %br/
+            %i
+
+    = javascript_include_tag 'application'

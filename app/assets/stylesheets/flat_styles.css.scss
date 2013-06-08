@@ -1,0 +1,388 @@
+$mobile: max-width 760px;
+$dark-gray: #3D3D3C;
+$light-gray: #9E9D9C;
+$bold-orange: #E73D1E;
+$max-width: 1024px;
+$base-font-size: 16px;
+$base-line-height: 29px;
+$base-text-color: $dark-gray;
+
+@import "http://fonts.googleapis.com/css?family=Lato:400,300";
+@import 'bourbon';
+@import 'neat';
+
+@mixin column-as-full-width {
+  @include media($mobile) {
+    padding: 0 golden-ratio($base-font-size,2);
+    width: 100%;
+
+    &:not(:last-child) {
+      margin-bottom: golden-ratio($base-line-height, 1);
+    }
+  }
+}
+
+@mixin jumbotron {
+  text-align: center;
+}
+
+@mixin no-link-styles {
+  a, a:visited, a:active, a:hover {
+    color: $base-text-color;
+    text-decoration: none;
+  }
+}
+
+body {
+  color: white;
+  font-family: "Lato";
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+}
+
+footer {
+  @include no-link-styles;
+
+  background-color: $dark-gray;
+
+  section.copyright-tag {
+    @include span-columns(9);
+    @include media($mobile) {
+      padding: golden-ratio($base-font-size, 1) golden-ratio($base-font-size,2);
+      width: 100%;
+
+      //@include jumbotron;
+
+    }
+  }
+
+  section.address {
+    @include span-columns(3);
+    @include column-as-full-width;
+  }
+
+  address {
+    @include media($mobile) {
+    }
+  }
+}
+
+em {
+  font-style: italic;
+}
+
+strong {
+  font-weight: 600;
+}
+
+header.site-header {
+  @include no-link-styles;
+
+  color: $dark-gray;
+
+  margin: auto $base-line-height;
+  padding: $base-line-height 0;
+
+  .logo {
+    @include span-columns(6);
+    @include media($mobile) {
+      background-size: 100%;
+      width: 100%;
+      h1 {
+        @include jumbotron;
+        background-attachment: fixed;
+        background-position: center;
+      }
+    }
+
+
+    .brand {
+      background: url("/assets/five-tools-logo-01.png") no-repeat;
+      background-size: golden-ratio($base-font-size, 6);
+      color: transparent;
+      height: golden-ratio($base-line-height, 2);
+    }
+  }
+
+  nav {
+    @include span-columns(6);
+    @include column-as-full-width;
+
+    @include media($mobile) {
+      padding-left: 0;
+      margin-bottom: 0;
+    }
+
+    margin-top: $base-line-height;
+    margin-bottom: $base-line-height;
+
+
+    ul {
+      list-style-type: none;
+      margin-right: $base-font-size;
+
+      @include media($mobile) {
+        float: none;
+      }
+    }
+
+    li {
+      border-radius: 6px;
+      color: $light-gray;
+      display: inline;
+      font-size: golden-ratio($base-font-size, 1);
+      margin-left: golden-ratio($base-line-height, -1);
+      padding: $base-font-size golden-ratio($base-font-size, 1);
+
+      @include media($mobile) {
+        padding: golden-ratio($base-font-size, -2);
+        margin-left: 0;
+        display: block;
+      }
+
+      &:hover {
+        background-color: $light-gray;
+
+        a {
+          color: white;
+        }
+        @include media($mobile) {
+          background: none;
+          a {
+            color: $dark-gray;
+          }
+        }
+      }
+    }
+  }
+}
+
+section {
+  margin: 0;
+  padding: golden-ratio($base-line-height, 2) 0;
+
+  h2 {
+    @include jumbotron;
+
+    font-size: golden-ratio($base-font-size, 2);
+    line-height: golden-ratio($base-line-height, 2);
+    margin-bottom: $base-line-height;
+
+    @include media($mobile) {
+      padding-left: golden-ratio($base-font-size, 2);
+      padding-right: golden-ratio($base-font-size, 2);
+    }
+  }
+
+  h3 {
+    @include jumbotron;
+
+    font-size: golden-ratio($base-font-size, 1);
+    line-height: golden-ratio($base-line-height, 1);
+    margin-bottom: $base-font-size;
+  }
+
+  @include media($mobile) {
+    padding: golden-ratio($base-line-height, 1) 0;
+
+    h2 {
+      margin-bottom: 0;
+    }
+  }
+}
+
+ul.social-links {
+  @include no-link-styles;
+
+  list-style-type: none;
+  margin-top: 25px;
+
+  li {
+    display: inline;
+    margin-right: $base-font-size;
+  }
+}
+
+ul.bio-social-links {
+  @include jumbotron;
+  @extend .social-links;
+
+  li {
+    margin-left: $base-font-size;
+    margin-right: $base-font-size;
+  }
+
+}
+
+a, a:visited, a:active, a:hover {
+  color: $dark-gray;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+p {
+  margin-bottom: $base-line-height;
+}
+
+#get-in-touch {
+  @include span-columns(6);
+   h2 {
+    text-align: left;
+  }
+
+  @include media($mobile) {
+    width: 100%;
+    h2 {
+      @include jumbotron;
+    }
+  }
+}
+
+.contact-form {
+  @include span-columns(6);
+
+  form {
+    input {
+      border-radius: 6px;
+      border-style: none;
+      font-size: $base-font-size;
+      line-height: $base-line-height;
+      margin-bottom: golden-ratio($base-font-size, -1);
+      padding-left: 6px;
+      padding-right: 6px;
+      width: 100%;
+    }
+
+    textarea {
+      border-radius: 6px;
+      border-style: none;
+      font-size: $base-font-size;
+      height: golden-ratio($base-line-height, 5);
+      padding-top: 6px;
+      padding-left: 6px;
+      padding-right: 6px;
+      width: 100%;
+    }
+
+    input[type="submit"] {
+      background-color: white;
+      border-color: $dark-gray;
+      border-radius: 6px;
+      border-style: solid;
+      border-width: 0.25px;
+      background-color: $bold-orange;
+      color: white;
+
+      &:hover {
+        background-color: shade($bold-orange, 30%);
+      }
+    }
+  }
+
+  @include media($mobile) {
+    padding: 0 golden-ratio($base-font-size,2);
+    width: 100%;
+
+    input, textarea {
+      width: 100%;
+    }
+  }
+}
+
+.about {
+  background-color: $light-gray;
+
+  aside {
+    @include span-columns(4);
+    @include column-as-full-width;
+  }
+
+  article {
+    @include span-columns(8);
+    @include column-as-full-width;
+  }
+
+  figure {
+    padding-top: 10px;
+
+    img {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: golden-ratio($base-line-height, -1);
+    }
+  }
+
+  figcaption {
+    @include jumbotron;
+
+    strong {
+      font-style: bold;
+      font-size: golden-ratio($base-font-size, 1);
+    }
+  }
+}
+
+
+.banner {
+  background-color: $bold-orange;
+}
+
+.contact-us {
+  background-color: $light-gray;
+}
+
+.container {
+  @include outer-container;
+}
+
+.jumbotron {
+  @include jumbotron;
+}
+
+.services {
+  background-color: $dark-gray;
+}
+
+.portfolio, .technologies {
+  color: $dark-gray;
+}
+
+.portfolio-item {
+  @include span-columns(6);
+  @include omega(2n);
+  @include column-as-full-width;
+
+  margin-top: golden-ratio($base-line-height, 1);
+
+  &:nth-child(2n+1) {
+    padding-right: golden-ratio($base-font-size, 2);
+  }
+
+  &:nth-child(2n) {
+    padding-left: golden-ratio($base-font-size, 2);
+  }
+
+  img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: golden-ratio(100%, -2);
+  }
+
+  h4 {
+    @include jumbotron;
+    margin-bottom: $base-line-height;
+  }
+}
+
+.service-item {
+  @include span-columns(4);
+  @include column-as-full-width;
+}
+
+.hide-mobile {
+  @include media($mobile) {
+    display: none;
+  }
+}

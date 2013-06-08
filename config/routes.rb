@@ -3,5 +3,5 @@ Fivetool::Application.routes.draw do
 
   get '/home', to: 'home#index', as: 'home'
 
-  root to: 'home#index'
+  root to: 'home#show'
 end

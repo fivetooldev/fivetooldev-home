@@ -12,43 +12,5 @@
 #
 #= require jquery
 #= require jquery_ujs
-#= require jquery.mousewheel-3.0.4.pack
-#= require jquery.gmap
-#= require iso-custom
-#= require jquery.isotope.min
-#= require anchor
-#= require jquery.mousewheel-3.0.4.pack
-#= require jquery.gmap
-#= require iso-custom
-#= require jquery.isotope.min
-#= require bootstrap-scrollspy
-#= require anchor
-#= require bootstrap
+#= require jquery.ui.all
 #= require google-analytics
-#= require_tree .
-
-window.display_thanks_modal = ->
-  jQuery('#thanks').modal('show');
-
-jQuery(document).ready ->
-  jQuery("#map").gMap
-    controls: false,
-    scrollwheel: false,
-    draggable: true,
-    markers: [{
-      latitude: 38.9205787,
-      longitude:  -77.0419928,
-      icon:
-        image: "assets/pin.png",
-        iconsize: [32, 47],
-        iconanchor: [32,47],
-        infowindowanchor: [12, 0]
-    }],
-    latitude: 38.9205787,
-    longitude: -77.0419928,
-    zoom: 14
-
-  if jQuery('#blog').length > 0
-    console.log('resetting nav')
-    markNavForBlogPosts()
-
