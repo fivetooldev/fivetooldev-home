@@ -2,19 +2,19 @@ source 'https://rubygems.org'
 
 ruby "2.0.0"
 
+gem 'bourbon'
+gem 'coffee-rails', '~> 4.0.0.rc1', require: 'coffee_script'
 gem 'email_validator'
 gem 'haml-rails'
 gem 'jquery-rails'
+gem 'jquery-ui-rails'
+gem 'neat'
 gem 'pg'
 gem 'rails', '4.0.0.rc1'
+gem 'sass-rails',   '~> 4.0.0.rc1', require: 'sass'
+gem 'sprockets-rails', require: 'sprockets/railtie'
 gem 'thin'
-
-group :assets do
-  gem 'sass-rails',   '~> 4.0.0.rc1', require: 'sass'
-  gem 'coffee-rails', '~> 4.0.0.rc1', require: 'coffee_script'
-  gem 'sprockets-rails', require: 'sprockets/railtie'
-  gem 'uglifier', '>= 1.3.0'
-end
+gem 'uglifier', '>= 1.3.0'
 
 group :development do
   gem 'better_errors'
