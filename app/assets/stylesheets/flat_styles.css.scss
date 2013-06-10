@@ -212,15 +212,11 @@ header#site-header {
     li {
       display: inline;
       padding: 0 $base-font-size;
-
-      @include media($mobile) {
-        //display: block;
-      }
     }
 
     ul {
       float: right;
-      margin-top: $base-line-height;
+      margin-top: 42px;
 
       @include media($mobile) {
         @include jumbotron;
