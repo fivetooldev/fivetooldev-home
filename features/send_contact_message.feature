@@ -6,6 +6,6 @@ Feature: Send a Contact Message
 
   Scenario: Send a contact message
     Given a filled out contact us form on the home page
-    When I click "Send to Us"
+    When I click "Send Us a Message"
     Then a contact message record should be created
     And I should see an alert with the text "Thanks for contacting us. We will be in touch shortly."
