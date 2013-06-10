@@ -16,7 +16,6 @@
     %meta{name: "og:type", content: 'website'}
     %meta{name: "og:description", content: 'Five Tool Development builds web applications and provides consulting to small businesses.'}
 
-    %a{href: "https://plus.google.com/103531392410254836222", rel: "publisher"}Google+
     = stylesheet_link_tag "http://fonts.googleapis.com/css?family=Lato:400,300"
     = stylesheet_link_tag :application, :media => 'all'
     = csrf_meta_tags
@@ -47,6 +46,7 @@
         %section#copyright-tag
           .copyright
             &copy 2013 Five Tool Development, Inc.
+            %a{style: "display: none;", href: "https://plus.google.com/103531392410254836222", rel: "publisher"} Google+
           %ul.social-links
             %li
               %a{href: "http://twitter.com/fivetooldev"}
