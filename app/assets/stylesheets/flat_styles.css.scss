@@ -334,6 +334,10 @@ footer, .services, .technologies {
   img {
     display: inline;
     margin: 0;
+
+    &:hover {
+      opacity: 0.5;
+    }
   }
 }
 
