@@ -13,12 +13,9 @@ $base-text-color: $dark-gray;
 
 @mixin column-as-full-width {
   @include media($mobile) {
+    @include shift(0);
     padding: 0 golden-ratio($base-font-size, 1);
     width: 100%;
-
-    &:not(:last-child) {
-      margin-bottom: golden-ratio($base-line-height, 1);
-    }
   }
 }
 
@@ -74,7 +71,12 @@ section {
 
   h2 {
     font-size: golden-ratio($base-font-size, 2);
+    line-height: golden-ratio($base-line-height, 1);
     margin-bottom: $base-line-height;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 
   h3 {
@@ -85,6 +87,7 @@ section {
 
   a {
     font-weight: 600;
+    margin-left: 1px;
   }
 
   aside {
@@ -94,6 +97,7 @@ section {
 
     img {
       display: block;
+      margin-top: golden-ratio($base-font-size, -1);
       margin-left: auto;
       margin-right: auto;
     }
@@ -112,7 +116,7 @@ section {
       }
     }
 
-    p {
+    p:not(:first-child) {
       padding-top: $base-font-size;
     }
   }
@@ -122,6 +126,12 @@ section {
   @include span-columns(4);
   @include column-as-full-width;
 
+  @include media($mobile) {
+    &:not(:last-child) {
+      margin-bottom: golden-ratio($base-line-height, 2);
+    }
+  }
+
   &:not(:first-child) {
     padding-left: $base-line-height;
   }
@@ -130,6 +140,27 @@ section {
     padding-right: $base-line-height;
   }
 
+}
+
+.portfolio-item {
+  @include outer-container;
+  margin-top: golden-ratio($base-font-size, 4);
+
+  &:nth-child(2n) {
+    article {
+      padding-left: golden-ratio$base-line-height;
+    }
+  }
+
+  &:nth-child(2n+1) {
+    article {
+      padding-right: $base-line-height;
+    }
+
+    aside {
+      float: right;
+    }
+  }
 }
 
 .about, .contact-us {
@@ -150,7 +181,7 @@ header#site-header {
 
   h1.brand {
     color: transparent;
-    background: url("/assets/five-tool-logo.png") no-repeat;
+    background: url("http://s3.amazonaws.com/fivetooldev-homepage/five-tool-logo.png") no-repeat;
     height: 126px;
     width: 100%;
 
@@ -205,4 +236,98 @@ footer, .services, .technologies {
   background-color: $dark-gray;
   color: white;
   @include no-link-styles(white);
+}
+
+#get-in-touch, #contact-form-box {
+  @include span-columns(6);
+  @include column-as-full-width;
+
+  h2 {
+    text-align: left;
+    margin-bottom: golden-ratio($base-line-height, 1);
+
+    @include media($mobile) {
+      @include jumbotron;
+    }
+  }
+
+  input, textarea, button {
+    border-radius: 6px;
+    font-size: $base-font-size;
+    line-height: $base-line-height;
+    margin-bottom: golden-ratio($base-line-height, -1);
+    padding: 6px;
+    width: 100%;
+
+    &[type="submit"] {
+      background-color: $bold-orange;
+      border-style: none;
+      color: white;
+      margin-top: golden-ratio($base-line-height, -1);
+
+      &:hover, &:focus {
+        background-color: shade($bold-orange, 10%);
+      }
+    }
+  }
+
+  textarea {
+    height: golden-ratio($base-line-height, 3);
+  }
+}
+
+#copyright-tag {
+  @include span-columns(9);
+  @include column-as-full-width;
+}
+
+#address {
+  @include span-columns(3);
+  @include column-as-full-width;
+
+  float: right;
+
+  @include media($mobile) {
+    float: none;
+  }
+}
+
+#headshot {
+  figure {
+    img {
+      border-radius: 137.5px;
+    }
+  }
+  figcaption {
+    margin-top: $base-line-height;
+  }
+}
+
+#bio {
+  @include span-columns(7);
+  @include shift(1);
+
+  @include column-as-full-width;
+
+  margin-bottom: 0;
+}
+
+.social-links {
+  margin-top: $base-line-height;
+  margin-bottom: $base-line-height;
+  width: 100%;
+
+  li {
+    display: inline;
+    margin-right: $base-line-height;
+  }
+
+  img {
+    display: inline;
+    margin: 0;
+  }
+}
+
+.bio-social-links {
+  @extend .social-links;
 }

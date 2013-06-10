@@ -16,7 +16,7 @@
           %h3 Development
 
         %p
-          If you have an idea for a new product or tool, Five Tool Development can bring your project to successful execution. Our work is test-driven and designed to last. We build software you'll be proud to own.
+          If you have an idea for a new product or service, but you don't have the technical personnel to build it, Five Tool Development can bring your project to successful execution. Our work is test-driven and designed to last. We build software you'll be proud to own.
 
         %p
           Do you have "legacy" software that needs help? A buggy product built by contract labor? Let us evaluate and rehabilitate your project and get you back on the right track.
@@ -49,8 +49,7 @@
 
     %section.portfolio-item
       %aside
-        = image_tag "district_karaoke-logo.png"
-        %h4 District Karaoke
+        = image_tag "http://s3.amazonaws.com/fivetooldev-homepage/district_karaoke-logo.png", alt: "District Karaoke"
 
       %article
         %p
@@ -66,55 +65,63 @@
 
     %section.portfolio-item
       %aside
-        = image_tag "aft-logo.png"
-        %h4 American Federation of Teachers
+        = image_tag "http://s3.amazonaws.com/fivetooldev-homepage/aft-logo.png"
 
       %article
         %p
           The
           = link_to "American Federation of Teachers", "http://aft.org"
-          needed a web app to inform their members in Cleveland about the effects that a newly negotiated collective bargaining agreement would have on their compensation. The complexity of the previous salary scale (which had 216 different ranks) and the various potential outcomes for each member made provide accurate, personalized results to each members a challenge. Five Tool Development built a calculator that calculated each member's potential salary outcomes and displayed those results in a responsive design that looks great on the desktop and mobile phones. With an informed membership, the agreement was ratified by a union vote.
+          needed to inform their members in Cleveland about the effects that a pending collective bargaining agreement would have on their compensation. The complexity of the school district's existing salary scale (which had 216 different ranks) and the various potential outcomes for each member made the task of providing accurate, personalized results to each members a challenge. Five Tool Development built a web application that calculated each member's potential salary outcomes and displayed those results in a responsive design that looks great on the desktop and mobile phones. With an informed membership, the agreement was ratified by a union vote.
 
         %p
           See the calculator at
           %a{href: "http://ctu-279-compensation.org"}< ctu-279.compensation.org
           %span<> .
 
+
     %section.portfolio-item
       %aside
-        = image_tag "yellowstone-logo.png"
-        %h4 Velocity
+        = image_tag "http://s3.amazonaws.com/fivetooldev-homepage/velocity.png"
 
       %article
         %p
           = link_to "Velocity", "http://wearevelocity.com"
-          is a mobile strategy firm with a focus on helping unions and labor organizations. When Velocity wanted to build out a new set of mobile applications for unions powered by a common back-end, they came to Five Tool Development.
+          is a digital media agency and strategy firm with a focus on progressive causes, unions, and labor organizations. When Velocity wants to build web applications to support their clients' needs, they turn to Five Tool Development to build and deploy their applications on time and under budget.
 
         %p
-          We work with Velocity to develop Yellowstone, a custom-built mobile content management system with a focus on union member engagement. Yellowstone is built on Ruby on Rails and incorporates data from a client's Twitter, Flickr, Facebook, and user RSS feeds through APIs.
-
+          Five Tool Development provides Velocity with long-term consulting about architecture, infrastructure, and integration challenges.
 
     %section.portfolio-item
       %aside
-        = image_tag "wheelhouse_review-logo.png"
-        %h4 The Wheelhouse Review
+        = image_tag "http://s3.amazonaws.com/fivetooldev-homepage/yellowstone-logo.png"
+
+      %article
+        %p
+          When
+          = link_to "Velocity", "http://wearevelocity.com"
+          wanted to build out a new set of mobile applications for unions powered by a common back-end, they came to Five Tool Development. We worked with Velocity to develop Yellowstone, a custom-built mobile content management system with a focus on union member engagement. Yellowstone is built on Ruby on Rails and incorporates data from a client's Twitter, Flickr, Facebook, and user RSS feeds through APIs.
+
+    %section.portfolio-item
+      %aside
+        = image_tag "http://s3.amazonaws.com/fivetooldev-homepage/wheelhouse_review-logo.png"
 
       %article
         %p
           The
           = link_to "Wheelhouse Review", "http://thewheelhousereview.com"
-          is an always smart, often irreverent, and sometimes serious online magazine. Five Tool Development provides the Wheelhouse with consulting and strategic advice as they grow and build their business. Our consulting helped the Wheelhouse implement a better social media strategy. Now the editorial staff is able to track the sources of traffic to their site, identifying the most successful articles and contributors.
+          is an always smart, often irreverent, and sometimes serious online magazine. Five Tool Development provides the Wheelhouse with strategic advice as they grow and build their brand. Our consulting helped the Wheelhouse implement a better social media strategy. Now the editorial staff is able to track the sources of traffic to their site, identifying the most successful articles and contributors.
 
 %a{name: "contact-form"}
-
 %section.contact-us
   .container
     #get-in-touch.tagline
       %h2 Get in touch
 
-    .contact-form
+    #contact-form-box
       = form_for ContactMessage.new do |f|
         = f.text_field :name, placeholder: "Your Name", required: true
         = f.text_field :email_address, type: 'email', placeholder: "address@email.com", required: true
         = f.text_area :message, placeholder: "Your message", required: true
-        = f.submit "Send Us a Message"
+        %button{type: 'submit'}
+          %i.batch.batch-bullhorn
+          Send Us a Message

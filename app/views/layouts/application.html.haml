@@ -4,9 +4,22 @@
     %meta(charset="utf-8")
     %meta(name="ROBOTS" content="NOODP")
     %title Five Tool Development: Custom Software Development and Consulting
+    %meta(name="description" content="Five Tool Development helps small businesses do big things.")
+    %meta(name="keywords" content="Web Development, Rails, Ruby, Apps")
+    %meta(name="author" content="Five Tool Development, Inc.")
+    %meta{name: "twitter:site", content: "fivetooldev"}
+    %meta{name: "twitter:title", content: "Five Tool Development: Custom Software Development and Consulting"}
+    %meta{name: "twitter:description", content: 'Five Tool Development builds web applications and provides consulting to small businesses.'}
+    %meta{name: "og:url", content: "http://www.fivetool.io"}
+    %meta{name: "og:title", content: "Five Tool Development: Custom Software Development and Consulting"}
+    %meta{name: "og:site_name", content: "Five Tool Development: Custom Software Development and Consulting"}
+    %meta{name: "og:type", content: 'website'}
+    %meta{name: "og:description", content: 'Five Tool Development builds web applications and provides consulting to small businesses.'}
+
     = stylesheet_link_tag "http://fonts.googleapis.com/css?family=Lato:400,300"
     = stylesheet_link_tag :application, :media => 'all'
     = csrf_meta_tags
+    = favicon_link_tag
 
   %body
     %header#site-header
@@ -30,24 +43,24 @@
 
     %footer
       .container
-        %section.copyright-tag
+        %section#copyright-tag
           .copyright
             &copy 2013 Five Tool Development, Inc.
           %ul.social-links
             %li
               %a{href: "http://twitter.com/fivetooldev"}
-                = image_tag "twitter-flat.png", size: "40x40"
+                = image_tag "http://s3.amazonaws.com/fivetooldev-homepage/twitter-flat.png", size: "40x40"
             %li
               %a{href: "http://facebook.com/fivetooldev"}
-                = image_tag "facebook-flat.png", size: "40x40"
+                = image_tag "http://s3.amazonaws.com/fivetooldev-homepage/facebook-flat.png", size: "40x40"
             %li
               %a{href: "http://github.com/fivetooldev"}
-                = image_tag "github-flat.png", size: "40x40"
+                = image_tag "http://s3.amazonaws.com/fivetooldev-homepage/github-flat.png", size: "40x40"
             %li
               %a{href: "http://blog.fivetool.io/rss"}
-                = image_tag "rss-flat.png", size: "40x40"
+                = image_tag "http://s3.amazonaws.com/fivetooldev-homepage/rss-flat.png", size: "40x40"
 
-        %section.address
+        %section#address
           %address
             %strong Five Tool Development, Inc.
             %br/
@@ -55,10 +68,10 @@
             %br/
             Washington, DC 20009
             %br/
-            %i.icon-phone
+            %i.batch.batch-bell
             202.507.9041
             %br/
-            %i.icon-envelope
+            %i.batch.batch-envelope
             %em= mail_to "info@fivetool.io"
             %br/
             %i
