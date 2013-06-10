@@ -1,6 +1,6 @@
 %section.banner
   .container
-    %h2
+    %h1
       Five Tool Development
       %br/
       helps small companies do big things
@@ -9,9 +9,11 @@
   .container
     %h2 Services
 
-    .container
-      .service-item
-        %h3 Development
+    .inner-container
+      %article.service-item
+        %header
+          %i.batch.batch--large.batch-code
+          %h3 Development
 
         %p
           If you have an idea for a new product or tool, Five Tool Development can bring your project to successful execution. Our work is test-driven and designed to last. We build software you'll be proud to own.
@@ -19,8 +21,10 @@
         %p
           Do you have "legacy" software that needs help? A buggy product built by contract labor? Let us evaluate and rehabilitate your project and get you back on the right track.
 
-      .service-item
-        %h3 Consulting
+      %article.service-item
+        %header
+          %i.batch.batch--large.batch-users
+          %h3 Consulting
 
         %p
           You have a dream, and we'll help you guide it to launch and success. Five Tool Development can provide the services and advice of a chief technology officer (CTO) at a fraction of the cost of hiring a permanent, full-time team member.
@@ -28,8 +32,10 @@
         %p
           We can answer questions about design, architecture, hosting, and hiring. We'll help you find the best resources for your budget. When your launch takes off, you'll already have a plan in place to keep up with growth.
 
-      .service-item.hide-mobile
-        %h3 Security
+      %article.service-item.hide-mobile
+        %header
+          %i.batch.batch-lock.batch--large
+          %h3 Security
 
         %p
           It's a dangerous world. Your apps are being probed by the bad guys, who look for an opportunity to exploit your infrastructure or your customers. Five Tool Development can audit your software help you keep threats at bay.
@@ -41,15 +47,14 @@
   .container
     %h2 Some of our recent work
 
-    .container
-
-      %li.portfolio-item
+    %section.portfolio-item
+      %aside
         = image_tag "district_karaoke-logo.png"
         %h4 District Karaoke
 
+      %article
         %p
           District Karaoke is a competitive karaoke league in where the audience votes on performances with their mobile phones. Five Tool Development built a responsive mobile voting application and massive, searchable song catalog that support a wide variety of phones and keeps the party going five nights a week in Washington, DC and Arlington, VA. District Karaoke was a featured event this year at
-
           %a{href: "http://sxsw.com"} SxSW 2013
 
           %span> , and with a new administrative back-end and paperless process, will be expanding to other cities across the country this year.
@@ -59,10 +64,12 @@
           %a{href: "http://votedk.com"}< votedk.com
           %span<> .
 
-      %li.portfolio-item
+    %section.portfolio-item
+      %aside
         = image_tag "aft-logo.png"
         %h4 American Federation of Teachers
 
+      %article
         %p
           The
           = link_to "American Federation of Teachers", "http://aft.org"
@@ -73,21 +80,26 @@
           %a{href: "http://ctu-279-compensation.org"}< ctu-279.compensation.org
           %span<> .
 
-      %li.portfolio-item
+    %section.portfolio-item
+      %aside
         = image_tag "yellowstone-logo.png"
         %h4 Velocity
 
+      %article
         %p
           = link_to "Velocity", "http://wearevelocity.com"
           is a mobile strategy firm with a focus on helping unions and labor organizations. When Velocity wanted to build out a new set of mobile applications for unions powered by a common back-end, they came to Five Tool Development.
+
         %p
           We work with Velocity to develop Yellowstone, a custom-built mobile content management system with a focus on union member engagement. Yellowstone is built on Ruby on Rails and incorporates data from a client's Twitter, Flickr, Facebook, and user RSS feeds through APIs.
 
 
-      %li.portfolio-item.hide-mobile
+    %section.portfolio-item
+      %aside
         = image_tag "wheelhouse_review-logo.png"
         %h4 The Wheelhouse Review
 
+      %article
         %p
           The
           = link_to "Wheelhouse Review", "http://thewheelhousereview.com"

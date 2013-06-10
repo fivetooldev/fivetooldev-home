@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 ruby "2.0.0"
 
+gem 'batch-rails-4'
 gem 'bourbon'
 gem 'coffee-rails', '~> 4.0.0.rc1', require: 'coffee_script'
 gem 'email_validator'

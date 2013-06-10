@@ -2,6 +2,7 @@ $dark-gray: #3D3D3C;
 $light-gray: #9E9D9C;
 $bold-orange: #E73D1E;
 $max-width: 1024px;
+$mobile: max-width 980px 4;
 $base-font-size: 16px;
 $base-line-height: 29px;
 $base-text-color: $dark-gray;
@@ -10,36 +11,34 @@ $base-text-color: $dark-gray;
 @import 'bourbon';
 @import 'neat';
 
+@mixin column-as-full-width {
+  @include media($mobile) {
+    padding: 0 golden-ratio($base-font-size, 1);
+    width: 100%;
+
+    &:not(:last-child) {
+      margin-bottom: golden-ratio($base-line-height, 1);
+    }
+  }
+}
+
 @mixin jumbotron {
   text-align: center;
 }
 
-@mixin no-link-styles {
+@mixin no-link-styles($link-color: $dark-gray) {
   a, a:visited, a:active, a:hover {
-    color: $base-text-color;
+    color: $link-color;
     text-decoration: none;
   }
 }
 
 body {
-  color: white;
+  color: $dark-gray;
   font-family: "Lato";
   font-size: $base-font-size;
   line-height: $base-line-height;
-}
-
-footer {
   @include no-link-styles;
-
-  background-color: $dark-gray;
-
-  section.copyright-tag {
-    @include span-columns(9);
-  }
-
-  section.address {
-    @include span-columns(3);
-  }
 }
 
 em {
@@ -50,243 +49,160 @@ strong {
   font-weight: 600;
 }
 
-header.site-header {
-  @include no-link-styles;
+.container {
+  @include outer-container;
+  padding: golden-ratio($base-line-height, 1) golden-ratio($base-line-height, 2);
 
-  color: $dark-gray;
-
-  margin: auto $base-line-height;
-  padding: $base-line-height 0;
-
-  .logo {
-    @include span-columns(6);
-
-
-    .brand {
-      background: url("/assets/five-tools-logo-01.png") no-repeat;
-      background-size: golden-ratio($base-font-size, 6);
-      color: transparent;
-      height: golden-ratio($base-line-height, 2);
-    }
-  }
-
-  nav {
-    @include span-columns(6);
-
-    margin-top: $base-line-height;
-    margin-bottom: $base-line-height;
-
-    ul {
-      float: right;
-      list-style-type: none;
-    }
-
-    li {
-      border-radius: 6px;
-      color: $light-gray;
-      display: inline;
-      font-size: golden-ratio($base-font-size, 1);
-      margin-left: golden-ratio($base-line-height, -1);
-      padding: $base-font-size golden-ratio($base-font-size, 1);
-
-      &:hover {
-        background-color: $light-gray;
-
-        a {
-          color: white;
-        }
-      }
-    }
+  @include media($mobile) {
+    padding-left: $base-font-size;
+    padding-right: $base-font-size;
   }
 }
 
 section {
-  margin: 0;
-  padding: golden-ratio($base-line-height, 2) 0;
+  width: 100%;
+
+  h1, h2, h3, h4, h5 {
+    @include jumbotron;
+  }
+
+  h1 {
+    font-size: golden-ratio($base-font-size, 2);
+    line-height: golden-ratio($base-font-size, 3);
+    font-weight: 550;
+  }
 
   h2 {
-    @include jumbotron;
-
     font-size: golden-ratio($base-font-size, 2);
-    line-height: golden-ratio($base-line-height, 2);
     margin-bottom: $base-line-height;
   }
 
   h3 {
-    @include jumbotron;
-
     font-size: golden-ratio($base-font-size, 1);
-    line-height: golden-ratio($base-line-height, 1);
-    margin-bottom: $base-font-size;
-  }
-}
-
-ul.social-links {
-  @include no-link-styles;
-
-  list-style-type: none;
-  margin-top: 25px;
-
-  li {
-    display: inline;
-    margin-right: $base-font-size;
-  }
-}
-
-ul.bio-social-links {
-  @include jumbotron;
-  @extend .social-links;
-
-  li {
-    margin-left: $base-font-size;
-    margin-right: $base-font-size;
+    margin-top: golden-ratio($base-line-height, -1);
+    margin-bottom: golden-ratio($base-line-height, -1);
   }
 
-}
-
-a, a:visited, a:active, a:hover {
-  color: white;
-}
-
-p {
-  margin-bottom: $base-line-height;
-}
-
-#get-in-touch {
-  @include span-columns(6);
-   h2 {
-    text-align: left;
+  a {
+    font-weight: 600;
   }
-}
-
-.contact-form {
-  @include span-columns(6);
-
-  form {
-    input {
-      border-radius: 6px;
-      border-style: none;
-      font-size: $base-font-size;
-      line-height: $base-line-height;
-      margin-bottom: golden-ratio($base-font-size, -1);
-      padding-left: 6px;
-      padding-right: 6px;
-      width: 100%;
-    }
-
-    textarea {
-      border-radius: 6px;
-      border-style: none;
-      font-size: $base-font-size;
-      height: golden-ratio($base-line-height, 5);
-      padding-top: 6px;
-      padding-left: 6px;
-      padding-right: 6px;
-      width: 100%;
-    }
-
-    input[type="submit"] {
-      background-color: white;
-      border-color: $dark-gray;
-      border-radius: 6px;
-      border-style: solid;
-      border-width: 0.25px;
-      background-color: $bold-orange;
-      color: white;
-
-      &:hover {
-        background-color: shade($bold-orange, 30%);
-      }
-    }
-  }
-}
-
-.about {
-  background-color: $light-gray;
 
   aside {
     @include span-columns(4);
-  }
-
-  article {
-    @include span-columns(8);
-  }
-
-  figure {
-    padding-top: 10px;
+    @include column-as-full-width;
+    @include jumbotron;
 
     img {
       display: block;
       margin-left: auto;
       margin-right: auto;
-      margin-bottom: golden-ratio($base-line-height, -1);
     }
   }
 
-  figcaption {
-    @include jumbotron;
+  article {
+    @include span-columns(8);
+    @include column-as-full-width;
 
-    strong {
-      font-style: bold;
-      font-size: golden-ratio($base-font-size, 1);
+    header {
+      margin-top: $base-line-height;
+
+      i.batch {
+        @include jumbotron;
+        display: block;
+      }
     }
-  }
-}
 
-
-.banner {
-  background-color: $bold-orange;
-}
-
-.contact-us {
-  background-color: $light-gray;
-}
-
-.container {
-  @include outer-container;
-}
-
-.jumbotron {
-  @include jumbotron;
-}
-
-.services {
-  background-color: $dark-gray;
-}
-
-.portfolio, .technologies {
-  color: $dark-gray;
-}
-
-.portfolio-item {
-  @include span-columns(6);
-  @include omega(2n);
-
-  margin-top: golden-ratio($base-line-height, 1);
-
-  &:nth-child(2n+1) {
-    padding-right: golden-ratio($base-font-size, 2);
-  }
-
-  &:nth-child(2n) {
-    padding-left: golden-ratio($base-font-size, 2);
-  }
-
-  img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: golden-ratio(100%, -2);
-  }
-
-  h4 {
-    @include jumbotron;
-    margin-bottom: $base-line-height;
+    p {
+      padding-top: $base-font-size;
+    }
   }
 }
 
 .service-item {
   @include span-columns(4);
-  padding-left: $base-font-size;
-  padding-right: $base-font-size;
+  @include column-as-full-width;
+
+  &:not(:first-child) {
+    padding-left: $base-line-height;
+  }
+
+  &:not(:last-child) {
+    padding-right: $base-line-height;
+  }
+
+}
+
+.about, .contact-us {
+  background-color: $light-gray;
+  color: white;
+}
+
+.banner {
+  background-color: $bold-orange;
+  color: white;
+}
+
+header#site-header {
+  .logo {
+    @include span-columns(6);
+    @include column-as-full-width;
+  }
+
+  h1.brand {
+    color: transparent;
+    background: url("/assets/five-tool-logo.png") no-repeat;
+    height: 126px;
+    width: 100%;
+
+    @include media($mobile) {
+      background-position: center center;
+      background-size: 360px;
+    }
+  }
+
+  nav {
+    @include span-columns(6);
+    @include column-as-full-width;
+
+    font-size: golden-ratio($base-font-size, 1);
+
+    @include media($mobile) {
+      margin: 0 auto;
+    }
+
+    a:hover {
+      color: $bold-orange;
+    }
+
+    li {
+      display: inline;
+      padding: 0 $base-font-size;
+
+      @include media($mobile) {
+        //display: block;
+      }
+    }
+
+    ul {
+      float: right;
+      margin-top: $base-line-height;
+
+      @include media($mobile) {
+        @include jumbotron;
+
+        float: none;
+
+        margin-top: 0;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+    }
+  }
+}
+
+footer, .services, .technologies {
+  background-color: $dark-gray;
+  color: white;
+  @include no-link-styles(white);
 }
