@@ -31,9 +31,11 @@ $base-text-color: $dark-gray;
 }
 
 body {
+  background-color: $dark-gray;
   color: $dark-gray;
   font-family: "Lato";
   font-size: $base-font-size;
+  height: 100%;
   line-height: $base-line-height;
   @include no-link-styles;
 }
@@ -163,7 +165,7 @@ section {
   }
 }
 
-.about, .contact-us {
+.contact-us {
   background-color: $light-gray;
   color: white;
 }
@@ -174,6 +176,8 @@ section {
 }
 
 header#site-header {
+  background-color: white;
+
   .logo {
     @include span-columns(6);
     @include column-as-full-width;
@@ -235,6 +239,7 @@ header#site-header {
 footer, .services, .technologies {
   background-color: $dark-gray;
   color: white;
+  height: 100%;
   @include no-link-styles(white);
 }
 
@@ -290,6 +295,10 @@ footer, .services, .technologies {
   @include media($mobile) {
     float: none;
   }
+}
+
+.about, .portfolio {
+  background-color: white;
 }
 
 #headshot {
