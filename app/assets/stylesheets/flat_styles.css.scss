@@ -1,7 +1,7 @@
 $dark-gray: #3D3D3C;
 $light-gray: #9E9D9C;
 $bold-orange: #E73D1E;
-$max-width: 1024px;
+$max-width: 1200px;
 $mobile: max-width 980px 4;
 $base-font-size: 16px;
 $base-line-height: 29px;
@@ -258,6 +258,7 @@ footer, .services, .technologies {
 
   input, textarea, button {
     border-radius: 6px;
+    border-style: none;
     font-size: $base-font-size;
     line-height: $base-line-height;
     margin-bottom: golden-ratio($base-line-height, -1);
@@ -266,7 +267,6 @@ footer, .services, .technologies {
 
     &[type="submit"] {
       background-color: $bold-orange;
-      border-style: none;
       color: white;
       margin-top: golden-ratio($base-line-height, -1);
 
