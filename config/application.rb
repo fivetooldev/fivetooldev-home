@@ -5,6 +5,7 @@ require 'rails/all'
 Bundler.require(:default, Rails.env)
 
 module Fivetool
+
   class Application < Rails::Application
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
@@ -28,4 +29,5 @@ module Fivetool
 
     config.assets.initialize_on_precompile = false
   end
+
 end
