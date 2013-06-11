@@ -1,9 +1,12 @@
 %section.banner
   .container
     %h1
-      Five Tool Development
-      %br/
-      helps small companies do big things
+      - if flash[:notice].present?
+        = flash[:notice]
+      - else
+        Five Tool Development
+        %br/
+        helps small companies do big things
 
 %section.services
   .container
@@ -120,7 +123,8 @@
     #contact-form-box
       = form_for ContactMessage.new do |f|
         = f.text_field :name, placeholder: "Your Name", required: true
-        = f.text_field :email_address, type: 'email', placeholder: "address@email.com", required: true
+        = f.text_field :location, type: 'email', placeholder: "address@email.com", required: true
+        = f.text_field :email_address, type: 'email', placeholder: "address@email.com"
         = f.text_area :message, placeholder: "Your message", required: true
         %button{type: 'submit'}
           %i.batch.batch-bullhorn

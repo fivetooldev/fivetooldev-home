@@ -340,3 +340,8 @@ footer, .services, .technologies {
 .bio-social-links {
   @extend .social-links;
 }
+
+#contact_message_email_address {
+  display: none;
+}
+

@@ -24,7 +24,8 @@ class ContactMessagesController < ApplicationController
   end
 
   def contact_message_params
-    params.require(:contact_message).permit(:email_address, :message, :name)
+    params.require(:contact_message)
+      .permit(:email_address, :location, :message, :name)
   end
 
   def deliver_notification_email

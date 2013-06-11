@@ -3,7 +3,10 @@
 ##
 class ContactMessage < ActiveRecord::Base
 
-  validates :email_address, presence: true, email: true
-  validates_presence_of :name
+  attr_accessor :email_address
+
+  validates :email_address, inclusion: [nil, '']
+  validates :location, presence: true, email: true
+  validates :name, presence: true
 
 end
