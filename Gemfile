@@ -56,4 +56,5 @@ end
 group :production do
   gem 'newrelic_rpm'
   gem 'rails_version'
+  gem 'sentry-raven'
 end
