@@ -14,6 +14,7 @@ gem 'neat'
 gem 'pg'
 gem 'rails', '4.0.0.rc2'
 gem 'sass-rails',   '~> 4.0.0.rc1', require: 'sass'
+gem "sentry-raven", :git => "https://github.com/getsentry/raven-ruby.git"
 gem 'sprockets-rails', require: 'sprockets/railtie'
 gem 'thin'
 gem 'uglifier', '>= 1.3.0'
@@ -56,5 +57,4 @@ end
 group :production do
   gem 'newrelic_rpm'
   gem 'rails_version'
-  gem 'sentry-raven'
 end
