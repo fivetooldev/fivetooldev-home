@@ -26,6 +26,11 @@ group :development do
   gem 'bullet'
   gem 'foreman'
   gem 'quiet_assets'
+  gem 'ruby-prof'
+end
+
+group :development, :production do
+  gem 'newrelic_rpm'
 end
 
 group :development, :test do
@@ -56,6 +61,5 @@ group :test do
 end
 
 group :production do
-  gem 'newrelic_rpm'
   gem 'rails_version'
 end

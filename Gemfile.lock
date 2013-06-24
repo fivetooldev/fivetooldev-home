@@ -209,6 +209,7 @@ GEM
       rspec-core (~> 2.13.0)
       rspec-expectations (~> 2.13.0)
       rspec-mocks (~> 2.13.0)
+    ruby-prof (0.13.0)
     rubyzip (0.9.9)
     sass (3.2.9)
     sass-rails (4.0.0.rc2)
@@ -289,6 +290,7 @@ DEPENDENCIES
   rails_version
   rspec
   rspec-rails
+  ruby-prof
   sass-rails (~> 4.0.0.rc1)
   selenium-webdriver
   sentry-raven!
