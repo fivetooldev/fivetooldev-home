@@ -4,7 +4,7 @@ ruby "2.0.0"
 
 gem 'batch-rails-4'
 gem 'bourbon'
-gem 'coffee-rails', '~> 4.0.0.rc1', require: 'coffee_script'
+gem 'coffee-rails'
 gem 'email_validator'
 gem 'haml-rails'
 gem 'high_voltage'
@@ -12,10 +12,9 @@ gem 'jquery-rails'
 gem 'jquery-ui-rails'
 gem 'neat'
 gem 'pg'
-gem 'rails', '4.0.0.rc2'
+gem 'rails', '~> 4.0.0'
 gem 'rails_12factor'
-gem 'sass-rails',   '~> 4.0.0.rc1', require: 'sass'
-gem "sentry-raven", :git => "https://github.com/getsentry/raven-ruby.git"
+gem 'sass-rails'
 gem 'sprockets-rails', require: 'sprockets/railtie'
 gem 'thin'
 gem 'uglifier', '>= 1.3.0'
@@ -31,6 +30,7 @@ end
 
 group :development, :production do
   gem 'newrelic_rpm'
+  gem "sentry-raven"
 end
 
 group :development, :test do
