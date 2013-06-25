@@ -15,7 +15,7 @@ gem 'pg'
 gem 'rails', '~> 4.0.0'
 gem 'rails_12factor'
 gem 'sass-rails'
-gem 'sprockets-rails', require: 'sprockets/railtie'
+gem 'sprockets-rails'
 gem 'thin'
 gem 'uglifier', '>= 1.3.0'
 
@@ -48,10 +48,7 @@ group :test do
   gem 'action_mailer_cache_delivery'
   gem 'bourne'
   gem 'capybara-webkit'
-  gem 'cucumber-rails',
-    github: "cucumber/cucumber-rails",
-    branch: "master_rails4_test",
-    require: false
+  gem 'cucumber-rails', require: false
   gem 'database_cleaner', '1.0.0.RC1'
   gem 'email_spec'
   gem 'rspec'
