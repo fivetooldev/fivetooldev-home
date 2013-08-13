@@ -17,7 +17,7 @@ gem 'rails_12factor'
 gem 'sass-rails'
 gem 'sprockets-rails'
 gem 'thin'
-gem 'uglifier', '>= 1.3.0'
+gem 'uglifier'
 
 group :development do
   gem 'better_errors'
@@ -34,6 +34,8 @@ group :development, :production do
 end
 
 group :development, :test do
+  gem 'better_errors'
+  gem 'bullet'
   gem 'cane'
   gem 'factory_girl_rails'
   gem 'letter_opener'
@@ -41,7 +43,7 @@ group :development, :test do
   gem 'rspec-rails'
   gem "shoulda-matchers",
     github: "thoughtbot/shoulda-matchers",
-    branch: 'dp-rails-four'
+    branch: "dp-rails-four"
 end
 
 group :test do
@@ -49,9 +51,8 @@ group :test do
   gem 'bourne'
   gem 'capybara-webkit'
   gem 'cucumber-rails', require: false
-  gem 'database_cleaner', '1.0.0.RC1'
+  gem 'database_cleaner'
   gem 'email_spec'
-  gem 'rspec'
   gem 'selenium-webdriver'
   gem 'simplecov', require: false
   gem 'timecop'
@@ -60,3 +61,4 @@ end
 group :production do
   gem 'rails_version'
 end
+
