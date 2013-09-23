@@ -48,8 +48,10 @@ group :test do
   gem 'action_mailer_cache_delivery'
   gem 'bourne'
   gem 'capybara-webkit'
-  gem "codeclimate-test-reporter", group: :test, require: nil
-  gem 'cucumber-rails', require: false
+  gem "codeclimate-test-reporter", require: false
+  gem 'cucumber-rails',
+    require: false,
+    github: 'cucumber/cucumber-rails'
   gem 'database_cleaner'
   gem 'email_spec'
   gem 'selenium-webdriver'
