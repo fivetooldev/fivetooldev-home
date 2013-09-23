@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 ruby "2.0.0"
 
+gem 'airbrake'
 gem 'batch-rails-4'
 gem 'bourbon'
 gem 'coffee-rails'
@@ -30,13 +31,13 @@ end
 
 group :development, :production do
   gem 'newrelic_rpm'
-  gem "sentry-raven"
 end
 
 group :development, :test do
   gem 'better_errors'
   gem 'bullet'
   gem 'cane'
+  gem 'dotenv'
   gem 'factory_girl_rails'
   gem 'letter_opener'
   gem 'quiet_assets'
