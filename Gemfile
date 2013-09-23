@@ -14,7 +14,6 @@ gem 'jquery-ui-rails'
 gem 'neat'
 gem 'pg'
 gem 'rails', '~> 4.0.0'
-gem 'rails_12factor'
 gem 'sass-rails'
 gem 'sprockets-rails'
 gem 'thin'
@@ -61,6 +60,7 @@ group :test do
 end
 
 group :production do
+  gem 'rails_12factor'
   gem 'rails_version'
 end
 
