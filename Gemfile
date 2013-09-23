@@ -41,9 +41,7 @@ group :development, :test do
   gem 'letter_opener'
   gem 'quiet_assets'
   gem 'rspec-rails'
-  gem "shoulda-matchers",
-    github: "thoughtbot/shoulda-matchers",
-    branch: "dp-rails-four"
+  gem "shoulda-matchers"
 end
 
 group :test do
