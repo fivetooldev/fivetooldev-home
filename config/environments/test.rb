@@ -38,8 +38,3 @@ Fivetool::Application.configure do
 
 end
 
-if Rails.env.test?
-  ENV['RAILS_SECRET_TOKEN'] = 'f0530f5e6f287c4bfe19436cdd633da9'
-
-  ENV['RAILS_SECRET_KEY_BASE'] = 'b43926b696e9f11afcfb0b3441e2a61f'
-end
