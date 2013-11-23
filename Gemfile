@@ -49,9 +49,7 @@ group :test do
   gem 'bourne'
   gem 'capybara-webkit'
   gem "codeclimate-test-reporter", require: false
-  gem 'cucumber-rails',
-    require: false,
-    github: 'cucumber/cucumber-rails'
+  gem 'cucumber-rails', require: false
   gem 'database_cleaner'
   gem 'email_spec'
   gem 'selenium-webdriver'
