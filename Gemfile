@@ -40,7 +40,9 @@ group :development, :test do
   gem 'letter_opener'
   gem 'parity'
   gem 'rspec-rails'
-  gem "shoulda-matchers"
+  gem "shoulda-matchers",
+    github: "thoughtbot/shoulda-matchers",
+    branch: "jd-add-4-1-beta"
 end
 
 group :test do

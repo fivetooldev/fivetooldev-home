@@ -1,3 +1,11 @@
+GIT
+  remote: git://github.com/thoughtbot/shoulda-matchers.git
+  revision: 8f6c9a815f2693b2e889e58b93d44b4c0a72c145
+  branch: jd-add-4-1-beta
+  specs:
+    shoulda-matchers (2.4.0)
+      activesupport (>= 3.0.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -213,8 +221,6 @@ GEM
       multi_json (~> 1.0)
       rubyzip (~> 1.0)
       websocket (~> 1.0.4)
-    shoulda-matchers (2.4.0)
-      activesupport (>= 3.0.0)
     simplecov (0.8.2)
       docile (~> 1.1.0)
       multi_json
@@ -294,7 +300,7 @@ DEPENDENCIES
   ruby-prof
   sass-rails
   selenium-webdriver
-  shoulda-matchers
+  shoulda-matchers!
   simplecov
   sprockets-rails
   thin

@@ -4,6 +4,8 @@
 class ContactMessagesController < ApplicationController
 
   def create
+    puts "ENVIRONMENT: #{ENV['RAILS_ENV']}"
+
     build_contact_message
 
     if @contact_message.save
