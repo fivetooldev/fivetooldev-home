@@ -33,13 +33,10 @@ group :development, :production do
 end
 
 group :development, :test do
-  gem 'better_errors'
-  gem 'bullet'
   gem 'cane'
   gem 'dotenv-rails'
   gem 'factory_girl_rails'
   gem 'letter_opener'
-  gem 'quiet_assets'
   gem 'rspec-rails'
   gem "shoulda-matchers"
 end
