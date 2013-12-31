@@ -236,6 +236,8 @@ GEM
       actionpack (>= 3.0)
       activesupport (>= 3.0)
       sprockets (~> 2.8)
+    sprockets_better_errors (0.0.4)
+      sprockets-rails (>= 1.0.0)
     thin (1.6.1)
       daemons (>= 1.0.9)
       eventmachine (>= 1.0.0)
@@ -303,6 +305,7 @@ DEPENDENCIES
   shoulda-matchers!
   simplecov
   sprockets-rails
+  sprockets_better_errors
   thin
   timecop
   uglifier
