@@ -55,8 +55,14 @@ group :test do
   gem 'timecop'
 end
 
-group :production do
+group :production, :staging do
   gem 'rails_12factor'
   gem 'rails_version'
 end
+
+group :development, :test, :staging do
+  gem 'recipient_interceptor'
+end
+
+
 
