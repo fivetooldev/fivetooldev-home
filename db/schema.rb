@@ -20,8 +20,8 @@ ActiveRecord::Schema.define(version: 20130611142547) do
     t.string   "name"
     t.string   "location"
     t.text     "message"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
 end
