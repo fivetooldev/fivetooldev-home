@@ -293,7 +293,7 @@ footer, .services, .technologies {
   }
 }
 
-.about, .portfolio {
+.about, .portfolio, .jobs {
   background-color: white;
 }
 
@@ -345,3 +345,29 @@ footer, .services, .technologies {
   display: none;
 }
 
+.jobs {
+  ul {
+    padding-left: 21px;
+    list-style-type: disc;
+  }
+
+  article {
+    width: 100%;
+    margin-bottom: 50px;
+  }
+
+  #job-descriptions {
+    @include span-columns(7);
+    @include column-as-full-width;
+    margin-bottom: 0;
+  }
+
+  #benefits {
+    @include span-columns(4);
+    @include shift(1);
+    @include column-as-full-width;
+
+    height: 100%;
+    margin-bottom: 0;
+  }
+}
