@@ -2,10 +2,7 @@
 # Controller for contact us messages.
 ##
 class ContactMessagesController < ApplicationController
-
   def create
-    puts "ENVIRONMENT: #{ENV['RAILS_ENV']}"
-
     build_contact_message
 
     if @contact_message.save
@@ -26,8 +23,9 @@ class ContactMessagesController < ApplicationController
   end
 
   def contact_message_params
-    params.require(:contact_message)
-      .permit(:email_address, :location, :message, :name)
+    params.
+      require(:contact_message).
+      permit(:email_address, :location, :message, :name)
   end
 
   def deliver_notification_email
@@ -44,5 +42,4 @@ class ContactMessagesController < ApplicationController
       us at info@fivetool.io.
     heredoc
   end
-
 end

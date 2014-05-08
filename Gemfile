@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-ruby "2.1.0"
+ruby '2.1.1'
 
 gem 'airbrake'
 gem 'batch-rails-4'
@@ -14,10 +14,9 @@ gem 'jquery-ui-rails'
 gem 'neat'
 gem 'pg'
 gem 'pry-rails'
-gem 'rails', '~> 4.1.0.beta'
-gem 'sass-rails'
-# gem 'sprockets_better_errors'
-gem 'sprockets-rails'
+gem 'rails', '~> 4.1.1'
+# gem 'sass-rails'
+# gem 'sprockets-rails'
 gem 'thin'
 gem 'uglifier'
 
@@ -41,16 +40,14 @@ group :development, :test do
   gem 'letter_opener'
   gem 'parity'
   gem 'rspec-rails'
-  gem "shoulda-matchers",
-    github: "thoughtbot/shoulda-matchers",
-    branch: "jd-add-4-1-beta"
+  gem 'shoulda-matchers'
 end
 
 group :test do
   gem 'action_mailer_cache_delivery'
   gem 'bourne'
   gem 'capybara-webkit'
-  gem "codeclimate-test-reporter", require: false
+  gem 'codeclimate-test-reporter', require: false
   gem 'cucumber-rails', require: false
   gem 'database_cleaner'
   gem 'email_spec'
@@ -67,6 +64,3 @@ end
 group :development, :test, :staging do
   gem 'recipient_interceptor'
 end
-
-
-
