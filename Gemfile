@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-ruby '2.1.1'
+ruby '2.1.2'
 
 gem 'airbrake'
 gem 'batch-rails-4'
@@ -15,8 +15,6 @@ gem 'neat'
 gem 'pg'
 gem 'pry-rails'
 gem 'rails', '~> 4.1.1'
-# gem 'sass-rails'
-# gem 'sprockets-rails'
 gem 'thin'
 gem 'uglifier'
 
