@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-ruby '2.1.2'
+ruby '2.2.1'
 
 gem 'airbrake'
 gem 'batch-rails-4'
@@ -37,7 +37,7 @@ group :development, :test do
   gem 'factory_girl_rails'
   gem 'letter_opener'
   gem 'parity'
-  gem 'rspec-rails'
+  gem 'rspec-rails', "~> 2.14.2"
   gem 'shoulda-matchers'
 end
 
