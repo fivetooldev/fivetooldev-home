@@ -1,0 +1,76 @@
+==================================================================
+https://keybase.io/geoffharcourt
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of http://fivetool.io
+  * I am geoffharcourt (https://keybase.io/geoffharcourt) on keybase.
+  * I have a public key with fingerprint 1A93 CF28 14F1 BE09 FA9A  F2F2 7BF0 606D 6F5F 8C56
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "client": {
+            "name": "keybase.io node.js client",
+            "version": "0.8.18"
+        },
+        "key": {
+            "eldest_kid": "010135c0a345831a17f57d68d24b645a551e8b3536da6ec275289ef9f612033b13c70a",
+            "fingerprint": "1a93cf2814f1be09fa9af2f27bf0606d6f5f8c56",
+            "host": "keybase.io",
+            "key_id": "7bf0606d6f5f8c56",
+            "kid": "010135c0a345831a17f57d68d24b645a551e8b3536da6ec275289ef9f612033b13c70a",
+            "uid": "2cdd7e607afb4a6df1df2a70a822b500",
+            "username": "geoffharcourt"
+        },
+        "service": {
+            "hostname": "fivetool.io",
+            "protocol": "http:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1440611896,
+    "expire_in": 157680000,
+    "prev": "2173a3b60fab956bec8e5642f1d74e4b03c3b565815769f43f750f3d09b3ce9b",
+    "seqno": 11,
+    "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+
+owGtkn1MVWUcxy8oJSIvdWUudyE6TCDE63m/55AxcDIVCHJBwpV5OS/PA4eXey7n
+nnu5jJg19YYOtRBqymXawAnNEVGoAx1zQS4UWw2Ml0RRmjFyKzK6tYTOIWpr68/O
+X2f7fb7f5/v9Pc87oasMawJqfiyqkG31rwfcmOUNeXcWmRqEl8VqJLkGEcolYFf1
+PztXAZBkpAxU85wTmCU5xi6LwFzqjFlhkhA3UJySbNco1MyYMQapTdJ5XQ3KReBU
+bWWSqE8xFCMoAeUIkmIIjMMskLKINCPiJE+TFEdRGGB4giJokaOBgFsonGEBZCGN
+4ShB8BghWFBOOxBK9mKgOBRJj4hgHEsIEGcwEmI8QFnIsRzEIW7hIUqjtEhDCjIC
+RWvCEtmp/qsMspzUthzvP/j/Obdr2Q4XRNECaNTCQZ7kaBFiIsQ5jWBwnKdQVAed
+QFlZfDGQISzhFEF2Kaq+WW3klgSgb1evs4JByQ1UWS7/q5NDkVVZkMu1QYmqOpJ1
+nVrt0MEqwNtWLGy8ZBe1VWoC3z93iGmooEq6KUaSKI1hDEsnIcDjkBRgk3SCstAM
+qn36OcCtN8IsBEfwNAo5nqVoHggMoGgS15pZSEDyKCEQPEVTjC5lIUlAC4VCQkRZ
+nhAAyyN6q0q7rHljWlCuWPN0SsV2TnUpAKk9EmhabQhYY3gqKFB/pYa1wRF/P90S
+PMJwUm03Y54XNrbL/LaNW2z3DzU9nhwwtSaPr5vZ/UPlrbbJ7xyLymlv6pWoQwdH
+84bj94hLUc0f5vS0pGe2tIav2/4w2/qRG/G8uiMk4cHphdCgY3WP6xfCzy5u6hvI
+S08zL/gL4arfx6um3pr7rPvEr+vDOnO/MEe9WW+MFCbLZ10psRPBxp598mGqzfm1
+b4Yc6mtxe68VDiyxsZ137EuRhUrGM09yP9/cuJUvOZiSGfpxWtPQ3JjPfe6PpOPK
+7PSka2rbtfipfQVq6/7u3Upib9rozXvB/rKic5f99ZN3p5+8GP/+za++McdFX7Je
+vd70ylDvrH9Xfse3R2cudvoybpw4MJIzFeYzWTdfzCpNfd643TbS0S4diUA/bbgN
+B8ferYOte60mLDqysSKuLfDqG46HzUjHS4EbPI3GAjRMybkQXZYSv9p3yp/1KKNh
+/GV0f2h+6pa4M/E7qLvTW/neXG9xU3+XN7Nr15nEbPx+ZURAWEJbc8N71ioedglR
+RtPhnwrS/caA/r6Tl0YbDzjqfvY/yNuzYez4QnNp/tvrhyuOzmWQBmX8g8HXLL0V
+pr3svSGiJ+js5fn+ZxMSA601VPov8xMXWPdzTZ5Bx0DITo84ap2onQ5vrz6fmzn8
+ZcypR1eiihy/3fpkE9Z9e8Y78/2Iq2ttSGz0uPf6XEJfVvb5p48dnf8T
+=0J0a
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/geoffharcourt
+
+==================================================================
